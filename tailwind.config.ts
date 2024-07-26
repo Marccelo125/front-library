@@ -3,6 +3,7 @@ module.exports = {
   theme: {
     colors: {
       "p-green": "#4ADB7E",
+      "p-text-green": '#166534',
     },
   },
 };
