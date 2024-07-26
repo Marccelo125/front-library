@@ -16,7 +16,6 @@
     "vuetify-nuxt-module": "^0.16.1"
   },
   "devDependencies": {
-    "@nuxtjs/tailwindcss": "^6.12.1",
     "prettier": "3.3.3"
   }
 }
