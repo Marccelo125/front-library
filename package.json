@@ -10,13 +10,11 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "axios": "^1.7.2",
     "nuxt": "^3.12.4",
     "vue": "latest",
     "vuetify-nuxt-module": "^0.16.1"
   },
   "devDependencies": {
-    "@nuxtjs/tailwindcss": "^6.12.1",
     "prettier": "3.3.3"
   }
 }
