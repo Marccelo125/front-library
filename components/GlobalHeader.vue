@@ -1,9 +1,23 @@
 <template>
-    <header class="flex justify-between bg-p-green w-screen p-[1rem]">
-        <h1>LOGO</h1>
+    <header class="flex justify-between items-center bg-p-green w-screen px-[2rem]">
+        <h1 class="h-[100%] text-2xl">LOGO</h1>
         <nav>
-            <ul>
-                <li>OPTION</li>
+            <ul class="flex">
+                <li class="">
+                    <v-btn rounded="0" variant="text" size="x-large">
+                        OPTION
+                    </v-btn>
+                </li>
+                <li class="">
+                    <v-btn rounded="0" variant="text" size="x-large">
+                        OPTION
+                    </v-btn>
+                </li>
+                <li class="">
+                    <v-btn rounded="0" variant="text" size="x-large">
+                        OPTION
+                    </v-btn>
+                </li>
             </ul>
         </nav>
     </header>
