@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "build": "nuxt build",
-    "dev": "nuxt dev",
+    "dev": "nuxt --dotenv dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
@@ -12,7 +12,8 @@
   "dependencies": {
     "axios": "^1.7.2",
     "nuxt": "^3.12.4",
-    "vue": "latest"
+    "vue": "latest",
+    "vuetify-nuxt-module": "^0.16.1"
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^6.12.1"
