@@ -68,6 +68,7 @@ export default {
             </div>
 
             <v-text-field
+              v-model="password"
               :append-inner-icon="visible ? 'mdi-eye-off' : 'mdi-eye'"
               :type="visible ? 'text' : 'password'"
               hint="Sua senha deve conter ao menos 8 caracteres."
@@ -99,7 +100,9 @@ export default {
               >
             </span>
           </v-form>
-          <span class="d-flex justify-center text-medium-emphasis text-subtitle-2">
+          <span
+            class="d-flex justify-center text-medium-emphasis text-subtitle-2"
+          >
             Ou conecte-se com
           </span>
           <hr />
