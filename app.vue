@@ -1,10 +1,9 @@
 <script setup lang="ts">
-import GlobalHeader from './components/GlobalHeader.vue';
+import GlobalHeader from './components/HomeHeader.vue';
 </script>
 
 <template>
   <div>
-    <GlobalHeader />
     <NuxtPage />
   </div>
 </template>
