@@ -8,7 +8,7 @@ export default {
 
 <template>
   <v-container>
-    <v-row class="mx-auto">
+    <v-row class="mx-auto my-8 my-sm-12">
       <v-col
         class="d-none d-md-block rounded-s-xl"
         style="background-color: #4ade80"
