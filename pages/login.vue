@@ -33,7 +33,7 @@ export default {
             Bem-vindo de volta a <span style="color: #4ade80">My Library</span>
           </h1>
           <v-form
-            @submit.prevent="handleLogin"
+            @submit.prevent
             class="mx-auto mt-4 pb-8"
             max-width="448"
             rounded="lg"
