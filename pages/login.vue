@@ -31,7 +31,7 @@ export default {
 
 <template>
   <v-container
-    class="flex justify-center item-center ma-0"
+    class="d-flex justify-center align-center"
     :style="styles.container"
   >
     <v-row
