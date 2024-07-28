@@ -1,34 +1,59 @@
-<script>
+<script lang="ts">
+import type { StyleValue } from "vue";
+
+// Styles login page
+const styles: Record<string, StyleValue> = {
+  container: {
+    width: "100vw",
+    height: "100vh",
+    maxWidth: "none",
+  },
+  mainRow: {
+    maxWidth: "1000px",
+  },
+  imgCol: {
+    backgroundColor: "#4ade80",
+    maxWidth: "600px",
+  },
+  welcomeTitle: {
+    color: "#2c3f42",
+    fontWeight: "700",
+  },
+};
+
 export default {
   data: () => ({
     visible: false,
+    styles,
   }),
 };
 </script>
 
 <template>
-  <v-container>
-    <v-row class="mx-auto my-8 my-sm-12 rounded-xl rounded-e-xl overflow-hidden">
-      <v-col
-        class="d-none d-md-block"
-        style="background-color: #4ade80"
-      >
+  <v-container
+    class="flex justify-center item-center ma-0"
+    :style="styles.container"
+  >
+    <v-row
+      class="mx-auto my-8 my-sm-12 rounded-xl rounded-e-xl overflow-hidden"
+      :style="styles.mainRow"
+    >
+      <v-col class="d-none d-md-flex" :style="styles.imgCol">
         <v-img
-          max-height="540"
+          style="max-width: 600px"
           src="https://www.writeraccess.com/br/wp-content/uploads/sites/2/2022/11/Story_Hero-Image-1536x1228.png.webp"
-        ></v-img>
+        />
       </v-col>
       <v-col
         cols="12"
         md="5"
-        lg="4"
-        xl="3"
         class="d-flex bg-white pa-8 justify-center align-center"
+        style="width: 100%"
       >
         <div>
           <h1
             class="text-h6 text-sm-h4 text-md-h4"
-            style="color: #2c3f42; font-weight: 700"
+            :style="styles.welcomeTitle"
           >
             Bem-vindo de volta a <span style="color: #4ade80">My Library</span>
           </h1>
@@ -96,8 +121,8 @@ export default {
                 href="#"
                 rel="noopener noreferrer"
               >
-                Clique aqui</a
-              >
+                Clique aqui
+              </a>
             </span>
           </v-form>
           <span
@@ -107,7 +132,7 @@ export default {
           </span>
           <hr />
           <div class="d-flex justify-center mt-4">
-            <a href="" class="text-decoration-none">
+            <a href="#" class="text-decoration-none">
               <v-img
                 aspect-ratio="4/3"
                 max-height="36"
@@ -122,5 +147,3 @@ export default {
     </v-row>
   </v-container>
 </template>
-
-<style scoped></style>
