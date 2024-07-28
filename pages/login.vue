@@ -8,9 +8,9 @@ export default {
 
 <template>
   <v-container>
-    <v-row class="mx-auto my-8 my-sm-12">
+    <v-row class="mx-auto my-8 my-sm-12 rounded-xl rounded-e-xl overflow-hidden">
       <v-col
-        class="d-none d-md-block rounded-s-xl"
+        class="d-none d-md-block"
         style="background-color: #4ade80"
       >
         <v-img
@@ -23,7 +23,7 @@ export default {
         md="5"
         lg="4"
         xl="3"
-        class="d-flex bg-white rounded-0-sm rounded-e-xl pa-8 justify-center align-center"
+        class="d-flex bg-white pa-8 justify-center align-center"
       >
         <div>
           <h1
