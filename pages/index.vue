@@ -1,9 +1,5 @@
 <style lang="scss">
   @import '/assets/styles/variables.scss';
-  
-  .h1test {
-    color: $test-color;
-  }
 </style>
 
 <template>
