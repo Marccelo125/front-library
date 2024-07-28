@@ -8,4 +8,8 @@ export default defineNuxtConfig({
       apiUrl: "url",
     },
   },
+  vuetify: {
+    vuetifyOptions: {
+    }
+  }
 });
