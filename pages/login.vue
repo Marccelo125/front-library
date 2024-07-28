@@ -70,7 +70,7 @@ export default {
               density="compact"
               placeholder="johndoe@gmail.com"
               variant="outlined"
-            ></v-text-field>
+            />
 
             <div
               class="text-subtitle-1 d-block d-lg-flex align-center justify-space-between"
@@ -101,7 +101,7 @@ export default {
               placeholder="Insira sua senha"
               variant="outlined"
               @click:append-inner="visible = !visible"
-            ></v-text-field>
+            />
 
             <v-btn
               class="mt-4"
@@ -137,8 +137,7 @@ export default {
                 aspect-ratio="4/3"
                 max-height="36"
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/768px-Google_%22G%22_logo.svg.png"
-              >
-              </v-img>
+              />
               Entrar com Google
             </a>
           </div>
