@@ -1,44 +1,20 @@
+<script setup lang="ts">
+const email = ref<string>("");
+const password = ref<string>("");
+</script>
+
 <script lang="ts">
-import type { StyleValue } from "vue";
-
-// Styles login page
-const styles: Record<string, StyleValue> = {
-  container: {
-    width: "100vw",
-    height: "100vh",
-    maxWidth: "none",
-  },
-  mainRow: {
-    maxWidth: "1000px",
-  },
-  imgCol: {
-    backgroundColor: "#4ade80",
-    maxWidth: "600px",
-  },
-  welcomeTitle: {
-    color: "#2c3f42",
-    fontWeight: "700",
-  },
-};
-
 export default {
   data: () => ({
     visible: false,
-    styles,
   }),
 };
 </script>
 
 <template>
-  <v-container
-    class="d-flex justify-center align-center"
-    :style="styles.container"
-  >
-    <v-row
-      class="mx-auto my-8 my-sm-12 rounded-xl rounded-e-xl overflow-hidden"
-      :style="styles.mainRow"
-    >
-      <v-col class="d-none d-md-flex" :style="styles.imgCol">
+  <v-container class="d-flex justify-center align-center container-login">
+    <v-row class="mx-auto my-8 my-sm-12 rounded-xl overflow-hidden main-row">
+      <v-col class="d-none d-md-flex img-col">
         <v-img
           style="max-width: 600px"
           src="https://www.writeraccess.com/br/wp-content/uploads/sites/2/2022/11/Story_Hero-Image-1536x1228.png.webp"
@@ -51,10 +27,7 @@ export default {
         style="width: 100%"
       >
         <div>
-          <h1
-            class="text-h6 text-sm-h4 text-md-h4"
-            :style="styles.welcomeTitle"
-          >
+          <h1 class="text-h6 text-sm-h4 text-md-h4 welcome-title">
             Bem-vindo de volta a <span style="color: #4ade80">My Library</span>
           </h1>
           <v-form
@@ -146,3 +119,23 @@ export default {
     </v-row>
   </v-container>
 </template>
+
+<style lang="scss" scoped>
+@import "/assets/styles/variables.scss";
+.container-login {
+  width: 100vw;
+  height: 100vh;
+  max-width: none;
+  .main-row {
+    max-width: 1000px;
+    .welcome-title {
+      color: $dark-green;
+      font-weight: 700;
+    }
+    .img-col {
+      background-color: $main-green;
+      max-width: 600px;
+    }
+  }
+}
+</style>
