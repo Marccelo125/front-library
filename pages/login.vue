@@ -71,6 +71,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+  @import "/assets/styles/variables.scss";
   .container-login {
     width: 100vw;
     height: 100vh;
@@ -78,11 +79,11 @@ export default {
     .mainRow {
       max-width: 1000px;
       .welcomeTitle {
-        color: #2c3f42;
+        color: $dark-green;
         font-weight: 700;
       }
       .imgCol {
-        background-color: #4ade80;
+        background-color: $main-green;
         max-width: 600px;
       }
     }
