@@ -78,23 +78,23 @@ export default {
           v-if="optionsVisible"
           class="d-flex d-md-none d-lg-none hamburguer-options"
         >
-          <v-list class="bg-transparent ga-3">
-            <v-list-item class="header-list-item">
+          <v-list class="options-list bg-transparent ga-3">
+            <v-list-item class="header-list-item item-option">
               <h4 class="register-option">Criar Conta</h4>
             </v-list-item>
-            <v-list-item class="header-list-item">
+            <v-list-item class="header-list-item item-option">
               <h4 class="login-option">Entrar</h4>
             </v-list-item>
-            <v-list-item class="header-list-item">
+            <v-list-item class="header-list-item item-option">
               <h4>Catálogo</h4>
             </v-list-item>
-            <v-list-item class="header-list-item">
+            <v-list-item class="header-list-item item-option">
               <h4>Serviços</h4>
             </v-list-item>
-            <v-list-item class="header-list-item">
+            <v-list-item class="header-list-item item-option">
               <h4>Contato</h4>
             </v-list-item>
-            <v-list-item class="header-list-item">
+            <v-list-item class="header-list-item item-option">
               <h4>Suporte</h4>
             </v-list-item>
           </v-list>
@@ -120,10 +120,21 @@ export default {
   }
 
   .hamburguer-options {
-    top: 45px;
+    top: 64px;
     right: 0px;
+    width: 250px;
     position: fixed;
     background-color: $bg-white;
+    .options-list {
+        width: 100%;
+        .item-option {
+            cursor: pointer;
+            width: 100%;
+            &:hover {
+                background-color: rgb(228, 228, 228);
+            }
+        }
+    }
     .login-option {
       color: $main-green;
     }
