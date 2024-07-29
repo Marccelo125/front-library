@@ -79,7 +79,7 @@ export default {
           class="d-flex d-md-none d-lg-none hamburguer-options"
         >
           <v-list class="options-list bg-transparent ga-3">
-            <v-list-item class="header-list-item item-option">
+            <v-list-item class="header-list-item item-option" >
               <h4 class="register-option">Criar Conta</h4>
             </v-list-item>
             <v-list-item class="header-list-item item-option">
@@ -127,6 +127,7 @@ export default {
     background-color: $bg-white;
     .options-list {
         width: 100%;
+        padding: 0px;
         .item-option {
             cursor: pointer;
             width: 100%;
