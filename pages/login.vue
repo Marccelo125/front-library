@@ -10,14 +10,14 @@ export default {
 
 <template>
   <v-container class="d-flex justify-center align-center container-login" >
-    <v-row class="mx-auto my-8 my-sm-12 rounded-xl rounded-e-xl overflow-hidden mainRow">
-      <v-col class="d-none d-md-flex imgCol">
+    <v-row class="mx-auto my-8 my-sm-12 rounded-xl rounded-e-xl overflow-hidden main-row">
+      <v-col class="d-none d-md-flex img-col">
         <v-img style="max-width: 600px"
           src="https://www.writeraccess.com/br/wp-content/uploads/sites/2/2022/11/Story_Hero-Image-1536x1228.png.webp" />
       </v-col>
       <v-col cols="12" md="5" class="d-flex bg-white pa-8 justify-center align-center" style="width: 100%">
         <div>
-          <h1 class="text-h6 text-sm-h4 text-md-h4 welcomeTitle">
+          <h1 class="text-h6 text-sm-h4 text-md-h4 welcome-title">
             Bem-vindo de volta a <span style="color: #4ade80">My Library</span>
           </h1>
           <v-form @submit.prevent class="mx-auto mt-4 pb-8" max-width="448" rounded="lg">
@@ -76,13 +76,13 @@ export default {
     width: 100vw;
     height: 100vh;
     max-width: none;
-    .mainRow {
+    .main-row {
       max-width: 1000px;
-      .welcomeTitle {
+      .welcome-title {
         color: $dark-green;
         font-weight: 700;
       }
-      .imgCol {
+      .img-col {
         background-color: $main-green;
         max-width: 600px;
       }
