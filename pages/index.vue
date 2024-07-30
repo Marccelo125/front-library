@@ -10,12 +10,12 @@
 </script>
 
 <template>
-  <v-container class="d-flex flex-column justify-center align-center pa-0 ma-0 w-100 h-screen home-container" fluid="true">
+  <v-container class="d-flex flex-column justify-center align-center pa-0 ma-0 w-100 h-screen home-container" fluid>
     <Stars />
     <HomeHeader />
     <v-container
       class="d-sm-flex d-sm-flex d-lg-flex justify-center align-start position-relative h-screen ma-0 home-main"
-      fluid="true"
+      fluid
     >
       <v-col class="d-flex flex-column align-start justify-center title-col">
         <div>

@@ -8,7 +8,7 @@
 </script>
 
 <template>
-    <v-container class="stars-container" :fluid="true">
+    <v-container class="stars-container" fluid>
         <v-icon
             size="25px"
             
@@ -35,7 +35,7 @@
         .stars-element {
             @for $i from 1 through 25 {
                 &:nth-child(#{$i}) {
-                    animation: starsScaleAnimation random(10) * 1s  ease-in-out infinite;
+                    animation: starsScaleAnimation random(8) * 1s  ease-in-out infinite;
                 }
             }
             @keyframes starsScaleAnimation {
