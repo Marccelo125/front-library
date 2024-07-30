@@ -108,8 +108,12 @@ export default {
 @import "/assets/styles/variables.scss";
 
 .home-header {
+  top: 0px;
+  position: fixed;
   background-color: $bg-white;
   overflow: hidden;
+  box-shadow: 0px 3px 2px rgb(226, 226, 226);
+  z-index: 9999;
   .logo {
     width: 50px;
 
