@@ -30,7 +30,8 @@ export default {
       >
         <div style="width: 98%;">
           <h1 class="text-h6 text-sm-h4 text-md-h4 welcome-title">
-            Seja bem-vindo a <span>My Library</span>
+            Seja bem-vindo a <br/>
+            <span>My Library</span>
           </h1>
           <v-form
             @submit.prevent
