@@ -3,6 +3,7 @@
 
 * {
   font-family: Poppins;
+  box-sizing: border-box;
 }
 
 body {
@@ -10,5 +11,10 @@ body {
 }
 
 html {
+<<<<<<< HEAD
+  margin: 0px;
+  overflow: hidden;
+=======
   overflow: auto;
+>>>>>>> origin/develop
 }
