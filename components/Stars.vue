@@ -11,7 +11,6 @@
     <v-container class="stars-container" fluid>
         <v-icon
             size="25px"
-            
             :style="{
                 position: 'absolute',
                 top: `${randomNumber(100, windowHeight)}px`,
