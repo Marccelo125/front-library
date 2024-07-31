@@ -8,5 +8,5 @@ export default defineNuxtConfig({
       apiUrl: "url",
     },
   },
-  css: ["~/assets/css/main.scss"],
+  css: ["~/assets/styles/main.scss"],
 });
