@@ -105,58 +105,57 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@import "/assets/styles/variables.scss";
-
-.home-header {
-  top: 0px;
-  position: fixed;
-  background-color: $bg-white;
-  overflow: hidden;
-  box-shadow: 0px 3px 2px rgb(226, 226, 226);
-  z-index: 9999;
-  .logo {
-    width: 50px;
-
-    h1 {
-      font-family: "Limelight", sans-serif;
-      color: $main-green;
-    }
-  }
-
-  .hamburguer-options {
-    top: 64px;
-    right: 0px;
-    width: 250px;
+  @import "/assets/styles/variables.scss";
+  .home-header {
+    top: 0px;
     position: fixed;
     background-color: $bg-white;
-    .options-list {
-        width: 100%;
-        padding: 0px;
-        .item-option {
-            cursor: pointer;
-            width: 100%;
-            &:hover {
-                background-color: rgb(228, 228, 228);
-            }
-        }
-    }
-    .login-option {
-      color: $main-green;
-    }
-    .register-option {
-      color: $main-green;
-    }
-  }
+    overflow: hidden;
+    box-shadow: 0px 3px 2px rgb(226, 226, 226);
+    z-index: 9999;
+    .logo {
+      width: 50px;
 
-  .login-btn {
-    font-weight: bold;
-    background-color: $main-green;
-  }
+      h1 {
+        font-family: "Limelight", sans-serif;
+        color: $main-green;
+      }
+    }
 
-  .register-btn {
-    font-weight: bold;
-    color: $main-green;
-    border: 2px solid $main-green;
+    .hamburguer-options {
+      top: 64px;
+      right: 0px;
+      width: 250px;
+      position: fixed;
+      background-color: $bg-white;
+      .options-list {
+          width: 100%;
+          padding: 0px;
+          .item-option {
+              cursor: pointer;
+              width: 100%;
+              &:hover {
+                  background-color: rgb(228, 228, 228);
+              }
+          }
+      }
+      .login-option {
+        color: $main-green;
+      }
+      .register-option {
+        color: $main-green;
+      }
+    }
+
+    .login-btn {
+      font-weight: bold;
+      background-color: $main-green;
+    }
+
+    .register-btn {
+      font-weight: bold;
+      color: $main-green;
+      border: 2px solid $main-green;
+    }
   }
-}
 </style>
