@@ -16,23 +16,22 @@ export default {
 </script>
 
 <template>
-  <v-container class="d-flex justify-center align-center">
-    <v-row class="mx-auto my-6 my-xl-16 rounded-xl overflow-auto main-row">
-      <v-col class="d-none d-md-flex img-col">
+  <v-container class="d-flex justify-center align-center pa-0 register-container" fluid>
+    <v-row class="my-0 my-sm-6 my-md-6 my-xl-16 overflow-auto main-row" >
+      <v-col class="d-none d-md-flex d-lg-flex justify-center align-center img-col">
         <v-img
           style="max-width: 600px"
           src="https://www.writeraccess.com/br/wp-content/uploads/sites/2/2022/11/Story_Hero-Image-1536x1228.png.webp"
         />
       </v-col>
       <v-col
-        cols="12"
-        md="5"
         class="d-flex bg-white pa-8 justify-center align-center"
         style="width: 100%"
       >
-        <div>
+        <div style="width: 98%;">
           <h1 class="text-h6 text-sm-h4 text-md-h4 welcome-title">
-            Seja bem-vindo a <span>My Library</span>
+            Seja bem-vindo a <br/>
+            <span>My Library</span>
           </h1>
           <v-form
             @submit.prevent
@@ -84,14 +83,14 @@ export default {
               @click:append-inner="repeatVisible = !repeatVisible"
             />
 
-            <div class="text-subtitle-1">Número de celular</div>
+            <!-- <div class="text-subtitle-1">Número de celular</div>
 
             <v-text-field
               v-model="cellNumber"
               density="compact"
               placeholder="Insira seu número de celular"
               variant="outlined"
-            />
+            /> -->
 
             <v-btn
               class="button-vuetify mt-2"
@@ -126,7 +125,7 @@ export default {
                 max-height="36"
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/768px-Google_%22G%22_logo.svg.png"
               />
-              Entrar com Google
+              <span>Entrar com Google</span>
             </a>
           </div>
         </div>
@@ -152,7 +151,9 @@ export default {
 }
 
 .main-row {
-  max-width: 62.5rem;
+  max-width: 95%;
+  margin: 0px;
+  border-radius: 20px;
   .welcome-title {
     color: $dark-green;
     font-weight: 700;
@@ -162,7 +163,24 @@ export default {
   }
   .img-col {
     background-color: $main-green;
-    max-width: 600px;
   }
 }
+
+@media (min-width: 1280px) {
+  .main-row {
+    max-width: 65%;
+  }  
+}
+
+@media (max-width: 600px) {
+  .register-container {
+    .main-row {
+      max-width: 100%;
+      height: 100vh;
+      margin: 0px;
+      border-radius: 0px;
+    }
+  }
+}
+
 </style>
