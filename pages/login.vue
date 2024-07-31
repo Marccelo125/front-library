@@ -13,7 +13,7 @@ export default {
 
 <template>
   <v-container class="d-flex justify-center align-center container-login">
-    <v-row class="mx-auto my-8 my-sm-12 rounded-xl overflow-hidden main-row">
+    <v-row class="mx-auto my-6 my-xl-16 rounded-xl overflow-hidden main-row">
       <v-col class="d-none d-md-flex img-col">
         <v-img
           style="max-width: 600px"
@@ -28,11 +28,11 @@ export default {
       >
         <div>
           <h1 class="text-h6 text-sm-h4 text-md-h4 welcome-title">
-            Bem-vindo de volta a <span style="color: #4ade80">My Library</span>
+            Bem-vindo de volta a <span>My Library</span>
           </h1>
           <v-form
             @submit.prevent
-            class="mx-auto mt-4 pb-8"
+            class="form mx-auto mt-4 pb-8"
             max-width="448"
             rounded="lg"
           >
@@ -54,7 +54,6 @@ export default {
                   Esqueceu sua senha?
                   <a
                     class="text-decoration-none"
-                    style="color: #22c55e"
                     href="#"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -77,9 +76,8 @@ export default {
             />
 
             <v-btn
-              class="mt-4"
+              class="button-vuetify mt-4"
               type="submit"
-              style="background-color: #22c55e; color: white"
               size="large"
               variant="tonal"
               block
@@ -90,8 +88,7 @@ export default {
               Não possuí uma conta?
               <a
                 class="text-decoration-none"
-                style="color: #22c55e"
-                href="#"
+                href="/register"
                 rel="noopener noreferrer"
               >
                 Clique aqui
@@ -123,18 +120,37 @@ export default {
 <style lang="scss" scoped>
 @import "/assets/styles/variables.scss";
 .container-login {
-  width: 100vw;
-  height: 100vh;
-  max-width: none;
+  @media (min-width: 959px) {
+    width: 100vw;
+    height: 100vh;
+    max-width: none;
+  }
+
   .main-row {
-    max-width: 1000px;
+    max-width: 62.5rem;
     .welcome-title {
       color: $dark-green;
       font-weight: 700;
     }
+    span {
+      color: $main-green;
+    }
     .img-col {
       background-color: $main-green;
       max-width: 600px;
+    }
+  }
+}
+
+.form {
+  .button-vuetify {
+    background-color: $middle-green;
+    color: white;
+  }
+
+  span {
+    a {
+      color: $main-green;
     }
   }
 }

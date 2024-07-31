@@ -11,6 +11,10 @@ body {
 }
 
 html {
+<<<<<<< HEAD
   margin: 0px;
   overflow: hidden;
+=======
+  overflow: auto;
+>>>>>>> origin/develop
 }
