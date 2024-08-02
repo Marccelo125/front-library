@@ -52,14 +52,14 @@ export default {
               <div>
                 <span class="text-subtitle-2 text-medium-emphasis">
                   Esqueceu sua senha?
-                  <a
+                  <NuxtLink
                     class="text-decoration-none"
-                    href="#"
+                    to="#"
                     rel="noopener noreferrer"
                     target="_blank"
                   >
-                    Clique aqui</a
-                  >
+                    Clique aqui
+                  </NuxtLink>
                 </span>
               </div>
             </div>
@@ -86,13 +86,13 @@ export default {
             </v-btn>
             <span class="text-medium-emphasis text-subtitle-2">
               Não possuí uma conta?
-              <a
+              <NuxtLink
                 class="text-decoration-none"
-                href="/register"
+                to="/register"
                 rel="noopener noreferrer"
               >
                 Clique aqui
-              </a>
+              </NuxtLink>
             </span>
           </v-form>
           <span
@@ -101,15 +101,15 @@ export default {
             Ou conecte-se com
           </span>
           <hr />
-          <div class="d-flex justify-center mt-4">
-            <a href="#" class="text-decoration-none">
+          <div class="d-flex justify-center mt-4 google-button">
+            <NuxtLink to="#" class="text-decoration-none">
               <v-img
                 aspect-ratio="4/3"
                 max-height="36"
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/768px-Google_%22G%22_logo.svg.png"
               />
               Entrar com Google
-            </a>
+            </NuxtLink>
           </div>
         </div>
       </v-col>
@@ -149,6 +149,11 @@ export default {
   }
 
   span {
+    a {
+      color: $main-green;
+    }
+  }
+  .google-button {
     a {
       color: $main-green;
     }

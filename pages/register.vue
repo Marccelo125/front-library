@@ -103,13 +103,13 @@ export default {
             </v-btn>
             <span class="text-medium-emphasis text-subtitle-2">
               Já possuí uma conta?
-              <a
+              <NuxtLink
                 class="text-decoration-none"
-                href="/login"
+                to="/login"
                 rel="noopener noreferrer"
               >
                 Clique aqui
-              </a>
+              </NuxtLink>
             </span>
           </v-form>
           <span
@@ -119,14 +119,14 @@ export default {
           </span>
           <hr />
           <div class="d-flex justify-center mt-4">
-            <a href="#" class="text-decoration-none">
+            <NuxtLink to="#" class="text-decoration-none">
               <v-img
                 aspect-ratio="4/3"
                 max-height="36"
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/768px-Google_%22G%22_logo.svg.png"
               />
               <span>Entrar com Google</span>
-            </a>
+            </NuxtLink>
           </div>
         </div>
       </v-col>

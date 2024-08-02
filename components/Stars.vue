@@ -1,9 +1,13 @@
 <script lang="ts">
     export default {
         data: () => ({
-            windowWidth: window.innerWidth,
-            windowHeight: window.innerHeight,
+            windowWidth: 0,
+            windowHeight: 0,
         }),
+        mounted() {
+            this.windowHeight = window.innerHeight;
+            this.windowWidth = window.innerWidth;
+        },
     }
 </script>
 
