@@ -31,6 +31,7 @@
 
 <style scoped lang="scss">
     .stars-container {
+        overflow: hidden;
         width: 100%;
         height: 100dvh;
         position: absolute;
