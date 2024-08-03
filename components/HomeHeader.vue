@@ -83,16 +83,18 @@ export default {
           class="d-flex d-md-none d-lg-none hamburguer-options"
         >
           <v-list class="options-list bg-transparent ga-3">
-            <v-list-item class="header-list-item item-option">
-              <h4 class="register-option">
-                <NuxtLink to="/register"> Criar Conta </NuxtLink>
-              </h4>
-            </v-list-item>
-            <v-list-item class="header-list-item item-option">
-              <h4 class="login-option">
-                <NuxtLink to="/login"> Entrar </NuxtLink>
-              </h4>
-            </v-list-item>
+            <NuxtLink to="/register">
+              <v-list-item class="header-list-item item-option">
+                <h4 class="register-option">Criar Conta</h4>
+              </v-list-item>
+            </NuxtLink>
+            <NuxtLink to="/login">
+              <v-list-item class="header-list-item item-option">
+                <h4 class="login-option">
+                  Entrar
+                </h4>
+              </v-list-item>
+            </NuxtLink>
             <v-list-item class="header-list-item item-option">
               <h4>Catálogo</h4>
             </v-list-item>
@@ -147,13 +149,17 @@ export default {
         }
       }
     }
-    .login-option {
-      color: $main-green;
+    a {
       text-decoration: none;
+      .login-option {
+        color: $main-green;
+      }
     }
-    .register-option {
-      color: $main-green;
+    a {
       text-decoration: none;
+      .register-option {
+        color: $main-green;
+      }
     }
   }
 
