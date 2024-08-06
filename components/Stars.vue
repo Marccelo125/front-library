@@ -12,7 +12,7 @@
 </script>
 
 <template>
-    <v-container class="stars-container" fluid>
+    <v-container class="stars-container opacity-animation" fluid>
         <v-icon
             size="25px"
             :style="{

@@ -26,20 +26,20 @@ export default {
         <v-col class="d-flex flex-column align-start justify-start title-col">
           <div>
             <h1
-              class="text-h4 text-lg-h2 text-md-h4 font-weight-bold title-of-home-page"
+              class="text-h4 text-lg-h2 text-md-h4 font-weight-bold title-of-home-page x-slide-transition"
             >
               Bem-Vindo a
               <span class="library-name">Library</span>
             </h1>
-            <p class="text-subtitle-1 text-lg-h4 text-md-h5 subtitle-library">
+            <p class="text-subtitle-1 text-lg-h4 text-md-h5 subtitle-library x-slide-transition">
               Um site para conectar o autor ao leitor
             </p>
           </div>
           <div>
-            <h3 class="text-subtitle-2 text-md-h6 text-lg-h5 mt-10 title-list">
+            <h3 class="text-subtitle-2 text-md-h6 text-lg-h5 mt-10 title-list x-slide-transition">
               Um pouco sobre nós:
             </h3>
-            <v-list class="bg-transparent">
+            <v-list class="bg-transparent x-slide-transition">
               <v-list-item v-for="item in aboutTextList" max-height="40px">
                 <template v-slot:prepend>
                   <v-icon size="15px" icon="mdi-checkbox-blank-circle" />
@@ -52,7 +52,7 @@ export default {
             </v-list>
           </div>
           <div class="mt-10">
-            <v-btn variant="flat" width="text-subtitle-2" class="init-button">
+            <v-btn variant="flat" width="text-subtitle-2" class="init-button x-slide-transition">
               Começar agora
             </v-btn>
           </div>
@@ -60,7 +60,7 @@ export default {
         <v-col
           class="d-none d-sm-flex d-md-flex d-lg-flex h-100 justify-center align-center"
         >
-          <v-img width="65%" src="~/assets/img/Books.svg" class="books-img" />
+          <v-img width="65%" src="~/assets/img/Books.svg" class="books-img x-slide-reverse-transition" />
         </v-col>
       </v-row>
     </v-container>
