@@ -1,3 +1,6 @@
+import darkTheme from "./config/themes/darkTheme";
+import lightTheme from "./config/themes/lightTheme";
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: "2024-04-03",
@@ -9,4 +12,15 @@ export default defineNuxtConfig({
     },
   },
   css: ["~/assets/styles/main.scss"],
+  vuetify: {
+    vuetifyOptions: {
+      theme: {
+        defaultTheme: "lightTheme",
+        themes: {
+          lightTheme,
+          darkTheme,
+        },
+      },
+    },
+  },
 });
