@@ -1,10 +1,10 @@
-const myCustomLightTheme = {
+const lightTheme = {
   dark: false,
   colors: {
     /* Custom Colors */
     "dark-bg": "#2C3F42",
-    "main-green": "#4ADE80",
     "middle-green": "#22c55e",
+    "main-green": "#4ADE80",
     "detail-green": "#59AC97",
     "white-bg": "#F8F8F8",
     "important-detail-one": "#FF5555",
@@ -46,4 +46,4 @@ const myCustomLightTheme = {
   },
 };
 
-export default myCustomLightTheme;
+export default lightTheme;
