@@ -1,4 +1,5 @@
-import myCustomLightTheme from "./config/themes/lightTheme";
+import darkTheme from "./config/themes/darkTheme";
+import lightTheme from "./config/themes/lightTheme";
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
@@ -14,9 +15,10 @@ export default defineNuxtConfig({
   vuetify: {
     vuetifyOptions: {
       theme: {
-        defaultTheme: "myCustomLightTheme",
+        defaultTheme: "lightTheme",
         themes: {
-          myCustomLightTheme,
+          lightTheme,
+          darkTheme,
         },
       },
     },
