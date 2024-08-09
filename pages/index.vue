@@ -52,7 +52,7 @@ export default {
             </v-list>
           </div>
           <div class="mt-10">
-            <v-btn variant="flat" width="text-subtitle-2" class="bg-main-green text-main-green x-slide-transition">
+            <v-btn variant="flat" width="text-subtitle-2" class="bg-main-green text-white x-slide-transition">
               Começar agora
             </v-btn>
           </div>
