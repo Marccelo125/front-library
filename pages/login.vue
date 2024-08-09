@@ -27,7 +27,9 @@ export default {
         style="width: 100%"
       >
         <div>
-          <h1 class="text-h6 text-sm-h4 text-md-h4 welcome-title text-dark-bg">
+          <h1
+            class="text-h6 text-sm-h4 text-md-h4 font-weight-bold text-dark-bg"
+          >
             Bem-vindo de volta a
             <span class="text-main-green">My Library</span>
           </h1>
@@ -51,9 +53,7 @@ export default {
             >
               <div>Senha</div>
               <div>
-                <span
-                  class="text-subtitle-2 text-medium-emphasis"
-                >
+                <span class="text-subtitle-2 text-medium-emphasis">
                   Esqueceu sua senha?
                   <NuxtLink
                     class="text-main-green text-decoration-none"
@@ -105,7 +105,10 @@ export default {
           </span>
           <hr />
           <div class="d-flex justify-center mt-4">
-            <NuxtLink to="#" class="text-h6 text-decoration-none font-weight-bold text-main-green">
+            <NuxtLink
+              to="#"
+              class="text-h6 text-decoration-none font-weight-bold text-main-green"
+            >
               <v-img
                 aspect-ratio="4/3"
                 max-height="36"
@@ -131,9 +134,6 @@ export default {
 
   .main-row {
     max-width: 62.5rem;
-    .welcome-title {
-      font-weight: 700;
-    }
     .img-col {
       max-width: 600px;
     }
