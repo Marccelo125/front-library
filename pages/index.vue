@@ -29,9 +29,9 @@ export default {
               class="text-h4 text-lg-h2 text-md-h4 font-weight-bold title-of-home-page x-slide-transition"
             >
               Bem-Vindo a
-              <span class="library-name color-main-green">Library</span>
+              <span class="library-name text-main-green">Library</span>
             </h1>
-            <p class="text-subtitle-1 text-lg-h4 text-md-h5 subtitle-library color-main-green x-slide-transition">
+            <p class="text-subtitle-1 text-lg-h4 text-md-h5 subtitle-library text-main-green x-slide-transition">
               Um site para conectar o autor ao leitor
             </p>
           </div>
@@ -52,7 +52,7 @@ export default {
             </v-list>
           </div>
           <div class="mt-10">
-            <v-btn variant="flat" width="text-subtitle-2" class="bg-main-green color-main-green x-slide-transition">
+            <v-btn variant="flat" width="text-subtitle-2" class="bg-main-green text-main-green x-slide-transition">
               Começar agora
             </v-btn>
           </div>
