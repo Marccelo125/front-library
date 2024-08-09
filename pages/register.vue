@@ -16,22 +16,29 @@ export default {
 </script>
 
 <template>
-  <v-container class="d-flex justify-center align-center pa-0 register-container" fluid>
-    <v-row class="my-0 my-sm-6 my-md-6 my-xl-16 overflow-auto main-row" >
-      <v-col class="d-none d-md-flex d-lg-flex justify-center align-center img-col">
+  <v-container
+    class="d-flex justify-center align-center pa-0 register-container"
+    fluid
+  >
+    <v-row class="my-0 my-sm-6 my-md-6 my-xl-16 overflow-auto main-row">
+      <v-col
+        class="d-none d-md-flex d-lg-flex justify-center align-center bg-main-green img-col"
+      >
         <v-img
           style="max-width: 600px"
-          src="https://www.writeraccess.com/br/wp-content/uploads/sites/2/2022/11/Story_Hero-Image-1536x1228.png.webp"
+          src="https://home.oxfordowl.co.uk/wp-content/uploads/2022/06/104_reading_at_Home_banner-1.png"
         />
       </v-col>
       <v-col
         class="d-flex bg-white pa-8 justify-center align-center"
         style="width: 100%"
       >
-        <div style="width: 98%;">
-          <h1 class="text-h6 text-sm-h4 text-md-h4 welcome-title">
-            Seja bem-vindo a <br/>
-            <span>My Library</span>
+        <div style="width: 98%">
+          <h1
+            class="text-h6 text-sm-h4 text-md-h4 text-dark-bg font-weight-bold"
+          >
+            Seja bem-vindo a <br />
+            <span class="text-main-green">My Library</span>
           </h1>
           <v-form
             @submit.prevent
@@ -93,7 +100,7 @@ export default {
             /> -->
 
             <v-btn
-              class="button-vuetify mt-2"
+              class="bg-middle-green text-white mt-2"
               type="submit"
               size="large"
               variant="tonal"
@@ -104,7 +111,7 @@ export default {
             <span class="text-medium-emphasis text-subtitle-2">
               Já possuí uma conta?
               <NuxtLink
-                class="text-decoration-none"
+                class="text-decoration-none text-main-green"
                 to="/login"
                 rel="noopener noreferrer"
               >
@@ -119,13 +126,16 @@ export default {
           </span>
           <hr />
           <div class="d-flex justify-center mt-4">
-            <NuxtLink to="#" class="text-decoration-none">
+            <NuxtLink
+              to="#"
+              class="text-h6 text-decoration-none font-weight-bold text-main-green"
+            >
               <v-img
                 aspect-ratio="4/3"
                 max-height="36"
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/768px-Google_%22G%22_logo.svg.png"
               />
-              <span>Entrar com Google</span>
+              Entrar com Google
             </NuxtLink>
           </div>
         </div>
@@ -137,39 +147,19 @@ export default {
 <style lang="scss" scoped>
 @import "/assets/styles/variables.scss";
 
-.form {
-  .button-vuetify {
-    background-color: $middle-green;
-    color: white;
-  }
-
-  span {
-    a {
-      color: $main-green;
-    }
-  }
-}
-
 .main-row {
   max-width: 95%;
   margin: 0px;
   border-radius: 20px;
   .welcome-title {
-    color: $dark-green;
     font-weight: 700;
-  }
-  span {
-    color: $main-green;
-  }
-  .img-col {
-    background-color: $main-green;
   }
 }
 
 @media (min-width: 1280px) {
   .main-row {
     max-width: 65%;
-  }  
+  }
 }
 
 @media (max-width: 600px) {
@@ -182,5 +172,4 @@ export default {
     }
   }
 }
-
 </style>
