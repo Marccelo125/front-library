@@ -1,9 +1,27 @@
 <script setup lang="ts">
+import RegisterApi from '~/utils/class/register/register-api';
+
 const name = ref<string>("");
 const email = ref<string>("");
 const password = ref<string>("");
 const repeatPassword = ref<string>("");
 const cellNumber = ref<string>("");
+
+const handleRegisterUser = () => {
+  const registerApi = new RegisterApi();
+
+  const userData = {
+    name: name.value,
+    email: email.value,
+    password: password.value, 
+  }
+
+
+  registerApi.register(userData).then(response => {
+    console.log(response);
+  });
+}
+
 </script>
 
 <script lang="ts">
@@ -34,7 +52,7 @@ export default {
             <span>My Library</span>
           </h1>
           <v-form
-            @submit.prevent
+            @submit.prevent="handleRegisterUser"
             class="form mx-auto mt-2 pb-8"
             max-width="448"
             rounded="lg"
