@@ -2,6 +2,20 @@ export interface RegisterApiType {
     register(userData: RegisterType): Promise<RegisterResponseType> 
 }
 
+export interface RegisterCostumerType {
+    register({
+        userName,
+        email,
+        password,
+    }: RegisterReferenciesType): Promise<void>
+}
+
+export interface RegisterReferenciesType {
+    userName: globalThis.Ref<string>
+    email: globalThis.Ref<string>
+    password: globalThis.Ref<string>
+}
+
 export interface RegisterType {
     name: string,
 	email: string,
