@@ -129,7 +129,6 @@ export default {
               :error-messages="password.errorMessage.value"
               :append-inner-icon="visible ? 'mdi-eye-off' : 'mdi-eye'"
               :type="visible ? 'text' : 'password'"
-              hint="Sua senha deve conter ao menos 8 caracteres."
               density="compact"
               placeholder="Insira sua senha"
               variant="outlined"
