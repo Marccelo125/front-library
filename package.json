@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@mdi/js": "^7.4.47",
+    "axios": "^1.7.3",
     "nuxt": "^3.12.4",
     "sass": "^1.77.8",
     "vue": "latest",
