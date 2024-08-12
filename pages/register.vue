@@ -35,7 +35,6 @@ const submit = handleSubmit((values) => {
       return;
     }
 
-    // verify erro response from api
     if (e.response.data.data.length > 0) {
 
       emailAlreadyExists.value = 'Email ja esta em uso.';
