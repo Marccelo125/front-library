@@ -1,25 +1,70 @@
 <script setup lang="ts">
 import RegisterApi from '~/utils/class/register/register-api';
+import RegisterCostumer from '~/utils/class/register/register-costumer';
+import {useField, useForm} from 'vee-validate';
+import { registerValidationSchema } from '~/utils/validations/register-validation-schema';
 
-const name = ref<string>("");
-const email = ref<string>("");
-const password = ref<string>("");
-const repeatPassword = ref<string>("");
-const cellNumber = ref<string>("");
+const registerLoading = ref(false);
+const emailAlreadyExists = ref<string | undefined>(undefined);
 
-const handleRegisterUser = () => {
-  const registerApi = new RegisterApi();
+// create form and validation with vee-validate
+const {handleSubmit, handleReset} = useForm({
+  validationSchema: registerValidationSchema,
+})
 
-  const userData = {
-    name: name.value,
-    email: email.value,
-    password: password.value, 
+// use handleSubmit from vee-validate
+const submit = handleSubmit((values) => {
+  registerLoading.value = true;
+  emailAlreadyExists.value = undefined;  
+
+  const registerCostumer = new RegisterCostumer();
+  
+  // register user into api
+  registerCostumer.register({
+    name,
+    email,
+    password,
+  }).then(response => {
+    console.log(response);
+
+    handleReset()    
+    registerLoading.value = false;
+  }).catch(e => {
+
+    if (!e.response.data) {
+      return;
+    }
+
+    // verify erro response from api
+    if (e.response.data.data.length > 0) {
+
+      emailAlreadyExists.value = 'Email ja esta em uso.';
+
+      // disable email already exists error after 5 seconds
+      setTimeout(() => {
+        emailAlreadyExists.value = undefined;
+      }, 5000)
+    }
+    
+    registerLoading.value = false
+  });
+});
+
+// use useFiled to create state
+const name = useField<string>('name');
+const email = useField<string>('email');
+const password = useField<string>('password');
+const repeatPassword = useField<string>('repeatPassword');
+
+
+
+// create password repeat rule
+const repeatPasswordRule = (value: string) => {
+  if (value !== password.value.value) {
+    return 'Sua senha deve ser igual à senha acima.'
   }
 
-
-  registerApi.register(userData).then(response => {
-    console.log(response);
-  });
+  return true;
 }
 
 </script>
@@ -52,7 +97,7 @@ export default {
             <span>My Library</span>
           </h1>
           <v-form
-            @submit.prevent="handleRegisterUser"
+            @submit.prevent="submit"
             class="form mx-auto mt-2 pb-8"
             max-width="448"
             rounded="lg"
@@ -60,7 +105,8 @@ export default {
             <div class="text-subtitle-1">Nome</div>
 
             <v-text-field
-              v-model="name"
+              v-model="name.value.value"
+              :error-messages="name.errorMessage.value"
               density="compact"
               placeholder="Insira seu nome"
               variant="outlined"
@@ -69,7 +115,8 @@ export default {
             <div class="text-subtitle-1">E-mail</div>
 
             <v-text-field
-              v-model="email"
+              v-model="email.value.value"
+              :error-messages="email.errorMessage.value || emailAlreadyExists"
               density="compact"
               placeholder="johndoe@gmail.com"
               variant="outlined"
@@ -78,7 +125,8 @@ export default {
             <div class="text-subtitle-1">Senha</div>
 
             <v-text-field
-              v-model="password"
+              v-model="password.value.value"
+              :error-messages="password.errorMessage.value"
               :append-inner-icon="visible ? 'mdi-eye-off' : 'mdi-eye'"
               :type="visible ? 'text' : 'password'"
               hint="Sua senha deve conter ao menos 8 caracteres."
@@ -91,27 +139,19 @@ export default {
             <div class="text-subtitle-1">Confirmar senha</div>
 
             <v-text-field
-              v-model="repeatPassword"
+              v-model="repeatPassword.value.value"
+              :error-messages="repeatPassword.errorMessage.value"
+              :rules="[repeatPasswordRule]"
               :append-inner-icon="repeatVisible ? 'mdi-eye-off' : 'mdi-eye'"
               :type="repeatVisible ? 'text' : 'password'"
-              hint="Sua senha deve ser igual à senha acima."
               density="compact"
               placeholder="Insira sua senha novamente"
               variant="outlined"
               @click:append-inner="repeatVisible = !repeatVisible"
             />
-
-            <!-- <div class="text-subtitle-1">Número de celular</div>
-
-            <v-text-field
-              v-model="cellNumber"
-              density="compact"
-              placeholder="Insira seu número de celular"
-              variant="outlined"
-            /> -->
-
             <v-btn
               class="button-vuetify mt-2"
+              :loading="registerLoading"
               type="submit"
               size="large"
               variant="tonal"
