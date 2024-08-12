@@ -1,19 +1,21 @@
+import type { FieldContext } from "vee-validate"
+
 export interface RegisterApiType {
     register(userData: RegisterType): Promise<RegisterResponseType> 
 }
 
 export interface RegisterCostumerType {
     register({
-        userName,
+        name,
         email,
         password,
-    }: RegisterReferenciesType): Promise<void>
+    }: RegisterReferenciesType): Promise<RegisterResponseType | void>
 }
 
 export interface RegisterReferenciesType {
-    userName: globalThis.Ref<string>
-    email: globalThis.Ref<string>
-    password: globalThis.Ref<string>
+    name: FieldContext<string>
+    email: FieldContext<string>
+    password: FieldContext<string>
 }
 
 export interface RegisterType {
