@@ -1,4 +1,5 @@
 import axios from "axios";
+// FIXME: Importando LoginErrorResponseType porém ele não é utilizado
 import type { LoginApiType, LoginDataType, LoginErrorResponseType, LoginSuccessResponseType } from "../types/login";
 
 export default class LoginApi implements LoginApiType {
