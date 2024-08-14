@@ -1,3 +1,4 @@
+// FIXME: Importando LoginErrorResponseType porém ele não é utilizado
 import type { LoginCostumerType, LoginErrorResponseType, LoginSuccessResponseType, LoginType } from "../types/login";
 import LoginApi from "./login-api";
 
