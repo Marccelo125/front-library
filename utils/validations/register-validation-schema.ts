@@ -3,9 +3,11 @@ export const registerValidationSchema = {
     if (!value) {
       return 'O campo e obrigatório!';
     }
+    
     if (value.length < 8) {
       return 'O campo precisa no mínimo de 8 caracteres.';
     }
+
     return true
   },
   email: (value: string | undefined) => {

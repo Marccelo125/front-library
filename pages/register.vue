@@ -61,8 +61,6 @@ const email = useField<string>('email');
 const password = useField<string>('password');
 const repeatPassword = useField<string>('repeatPassword');
 
-
-
 // create password repeat rule
 const repeatPasswordRule = (value: string) => {
   if (value !== password.value.value) {
@@ -71,7 +69,6 @@ const repeatPasswordRule = (value: string) => {
 
   return true;
 }
-
 </script>
 
 <script lang="ts">

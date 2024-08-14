@@ -12,7 +12,6 @@ export default class LoginApi implements LoginApiType {
         withCredentials: true,
     })
 
-
     async login(loginData: LoginDataType): Promise<LoginSuccessResponseType> {
         const response = await this.client.post('login', loginData);
 
