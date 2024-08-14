@@ -71,6 +71,7 @@ export default {
 @import "/assets/styles/variables.scss";
 
 .home-container {
+  overflow-y: hidden;
   background-image: url("~/assets/img/home-bg.png");
   background-repeat: repeat;
   background-size: 500px;
@@ -91,6 +92,9 @@ export default {
     .books-img {
       z-index: 2;
     }
+  }
+  @media (max-height: 600px) {
+    overflow-y: auto;
   }
 }
 </style>
