@@ -1,4 +1,5 @@
 <script setup lang="ts">
+// FIXME: RegisterApi é importado mas ele não é utilizado
 import RegisterApi from '~/utils/class/register/register-api';
 import RegisterCostumer from '~/utils/class/register/register-costumer';
 import {useField, useForm} from 'vee-validate';
