@@ -30,7 +30,3 @@ export interface LoginSuccessResponseType {
     },
     token: string
 }
-
-export interface LoginErrorResponseType {
-    error: string
-}
