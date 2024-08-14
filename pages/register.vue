@@ -13,7 +13,7 @@ const {handleSubmit, handleReset} = useForm({
 })
 
 // use handleSubmit from vee-validate
-const submit = handleSubmit((values) => {
+const registerSubmit = handleSubmit((values) => {
   registerLoading.value = true;
   emailAlreadyExists.value = undefined;  
 
@@ -25,9 +25,14 @@ const submit = handleSubmit((values) => {
     email,
     password,
   }).then(response => {
-    console.log(response);
+    if (response.success) {
+      // register success
 
-    handleReset()    
+      // process
+
+      handleReset()    
+    }
+
     registerLoading.value = false;
   }).catch(e => {
 
@@ -49,7 +54,7 @@ const submit = handleSubmit((values) => {
   });
 });
 
-// use useFiled to create state
+// use useField to create state
 const name = useField<string>('name');
 const email = useField<string>('email');
 const password = useField<string>('password');
@@ -96,7 +101,7 @@ export default {
             <span>My Library</span>
           </h1>
           <v-form
-            @submit.prevent="submit"
+            @submit.prevent="registerSubmit"
             class="form mx-auto mt-2 pb-8"
             max-width="448"
             rounded="lg"
