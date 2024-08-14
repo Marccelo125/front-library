@@ -3,9 +3,9 @@ import axios from 'axios';
 
 
 export default class RegisterApi implements RegisterApiType {
-    private token = useCookie("XSRF-TOKEN");
+    protected token = useCookie("XSRF-TOKEN");
 
-    private client = axios.create({
+    protected client = axios.create({
         baseURL: useRuntimeConfig().public.apiUrl + '/api',
         headers: {
             "X-XSRF-TOKEN": this.token.value
