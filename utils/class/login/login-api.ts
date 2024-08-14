@@ -1,6 +1,5 @@
 import axios from "axios";
-// FIXME: Importando LoginErrorResponseType porém ele não é utilizado
-import type { LoginApiType, LoginDataType, LoginErrorResponseType, LoginSuccessResponseType } from "../types/login";
+import type { LoginApiType, LoginDataType, LoginSuccessResponseType } from "../types/login";
 
 export default class LoginApi implements LoginApiType {
     protected token = useCookie("XSRF-TOKEN");
