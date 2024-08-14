@@ -5,11 +5,7 @@ export interface RegisterApiType {
 }
 
 export interface RegisterCostumerType {
-    register({
-        name,
-        email,
-        password,
-    }: RegisterReferenciesType): Promise<RegisterResponseType | void>
+    register({ name, email, password }: RegisterReferenciesType): Promise<RegisterResponseType | void>
 }
 
 export interface RegisterReferenciesType {
@@ -34,5 +30,5 @@ export interface RegisterResponseType {
         updated_at: string,
         created_at: string,
         id: number
-    }>
+    } | string>
 }
