@@ -35,6 +35,7 @@ const registerSubmit = handleSubmit((values) => {
 
     registerLoading.value = false;
   }).catch(e => {
+    // register error
 
     if (!e.response.data) {
       return;
