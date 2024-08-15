@@ -31,7 +31,7 @@ export default {
               Bem-Vindo a
               <span class="library-name text-main-green">Library</span>
             </h1>
-            <p class="text-subtitle-1 text-lg-subtitle-1 text-xl-h5 text-md-h5 subtitle-library text-main-green x-slide-transition">
+            <p class="text-subtitle-1 text-lg-subtitle-1 text-xl-h5 text-md-h5 subtitle-library text-surface-variant x-slide-transition">
               Um site para conectar o autor ao leitor
             </p>
           </div>
