@@ -54,10 +54,10 @@ export default {
 <template>
   <v-container class="d-flex justify-center align-center container-login">
     <v-row class="mx-auto my-6 my-xl-16 rounded-xl overflow-hidden main-row">
-      <v-col class="d-none d-md-flex img-col">
+      <v-col class="d-none d-md-flex img-col bg-main-green">
         <v-img
           style="max-width: 600px"
-          src="https://www.writeraccess.com/br/wp-content/uploads/sites/2/2022/11/Story_Hero-Image-1536x1228.png.webp"
+          src="https://home.oxfordowl.co.uk/wp-content/uploads/2022/06/118_Reading_6-7-1.png"
         />
       </v-col>
       <v-col
@@ -67,8 +67,11 @@ export default {
         style="width: 100%"
       >
         <div>
-          <h1 class="text-h6 text-sm-h4 text-md-h4 welcome-title">
-            Bem-vindo de volta a <span>My Library</span>
+          <h1
+            class="text-h6 text-sm-h4 text-md-h4 font-weight-bold text-dark-bg"
+          >
+            Bem-vindo de volta a
+            <span class="text-main-green">My Library</span>
           </h1>
           <v-form
             @submit.prevent="loginSubmit"
@@ -94,7 +97,7 @@ export default {
                 <span class="text-subtitle-2 text-medium-emphasis">
                   Esqueceu sua senha?
                   <NuxtLink
-                    class="text-decoration-none"
+                    class="text-main-green text-decoration-none"
                     to="#"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -117,7 +120,7 @@ export default {
             />
 
             <v-btn
-              class="button-vuetify mt-4"
+              class="bg-middle-green text-white mt-4"
               type="submit"
               size="large"
               variant="tonal"
@@ -128,7 +131,7 @@ export default {
             <span class="text-medium-emphasis text-subtitle-2">
               Não possuí uma conta?
               <NuxtLink
-                class="text-decoration-none"
+                class="text-main-green text-decoration-none"
                 to="/register"
                 rel="noopener noreferrer"
               >
@@ -142,8 +145,11 @@ export default {
             Ou conecte-se com
           </span>
           <hr />
-          <div class="d-flex justify-center mt-4 google-button">
-            <NuxtLink to="#" class="text-decoration-none">
+          <div class="d-flex justify-center mt-4">
+            <NuxtLink
+              to="#"
+              class="text-h6 text-decoration-none font-weight-bold text-main-green"
+            >
               <v-img
                 aspect-ratio="4/3"
                 max-height="36"
@@ -169,34 +175,8 @@ export default {
 
   .main-row {
     max-width: 62.5rem;
-    .welcome-title {
-      color: $dark-green;
-      font-weight: 700;
-    }
-    span {
-      color: $main-green;
-    }
     .img-col {
-      background-color: $main-green;
       max-width: 600px;
-    }
-  }
-}
-
-.form {
-  .button-vuetify {
-    background-color: $middle-green;
-    color: white;
-  }
-
-  span {
-    a {
-      color: $main-green;
-    }
-  }
-  .google-button {
-    a {
-      color: $main-green;
     }
   }
 }

@@ -13,7 +13,7 @@ export default {
 
 <template>
   <v-container
-    class="d-flex flex-column justify-center align-center pa-0 ma-0 w-100 h-screen home-container"
+    class="d-flex flex-column justify-center align-center pa-0 ma-0 w-100 h-screen home-container bg-white-bg"
     fluid
   >
     <Stars />
@@ -29,9 +29,9 @@ export default {
               class="text-h4 text-lg-h2 text-md-h4 font-weight-bold title-of-home-page x-slide-transition"
             >
               Bem-Vindo a
-              <span class="library-name">Library</span>
+              <span class="library-name text-main-green">Library</span>
             </h1>
-            <p class="text-subtitle-1 text-lg-h4 text-md-h5 subtitle-library x-slide-transition">
+            <p class="text-subtitle-1 text-lg-h4 text-md-h5 subtitle-library text-main-green x-slide-transition">
               Um site para conectar o autor ao leitor
             </p>
           </div>
@@ -52,7 +52,7 @@ export default {
             </v-list>
           </div>
           <div class="mt-10">
-            <v-btn variant="flat" width="text-subtitle-2" class="init-button x-slide-transition">
+            <v-btn variant="flat" width="text-subtitle-2" class="bg-main-green text-white x-slide-transition">
               Começar agora
             </v-btn>
           </div>
@@ -74,7 +74,6 @@ export default {
   background-image: url("~/assets/img/home-bg.png");
   background-repeat: repeat;
   background-size: 500px;
-  background-color: $bg-white;
   z-index: 2;
   .home-main {
     width: 90%;
@@ -83,17 +82,11 @@ export default {
       z-index: 2;
       .library-name {
         font-family: "Limelight", sans-serif;
-        color: $main-green;
         z-index: 2;
       }
       .subtitle-library {
-        color: $main-green;
         z-index: 2;
       }
-    }
-    .init-button {
-      background-color: $main-green;
-      color: $bg-white;
     }
     .books-img {
       z-index: 2;
