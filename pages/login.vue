@@ -1,6 +1,45 @@
 <script setup lang="ts">
-const email = ref<string>("");
-const password = ref<string>("");
+import {useField, useForm} from 'vee-validate';
+import LoginCostumer from '~/utils/class/login/login-costumer';
+import { loginValidationSchema } from '~/utils/validations/login-validation-schema';
+
+const loginErrorMessage = ref<string | undefined>(undefined);
+
+// create form and validation with vee-validation
+const {handleSubmit, handleReset} = useForm({
+  validationSchema: loginValidationSchema, 
+});
+
+// use handleSubmit from vee-validation
+const loginSubmit = handleSubmit((values) => {
+  const loginCostumer = new LoginCostumer();
+
+  loginErrorMessage.value = undefined
+
+  // login user with api
+  loginCostumer.login({email, password}).then(response => {
+    if (response.token) {
+      // login success
+
+      // process
+      
+      handleReset();
+      return;
+    }
+  }).catch(e => {
+    // login error
+
+    if (!e.response.data) {
+      return;
+    }
+
+    loginErrorMessage.value = e.response.data.error;
+  });
+});
+
+const email = useField<string>("email");
+const password = useField<string>("password");
+
 </script>
 
 <script lang="ts">
@@ -9,6 +48,7 @@ export default {
     visible: false,
   }),
 };
+
 </script>
 
 <template>
@@ -34,7 +74,7 @@ export default {
             <span class="text-main-green">My Library</span>
           </h1>
           <v-form
-            @submit.prevent
+            @submit.prevent="loginSubmit"
             class="form mx-auto mt-4 pb-8"
             max-width="448"
             rounded="lg"
@@ -42,7 +82,8 @@ export default {
             <div class="text-subtitle-1">E-mail</div>
 
             <v-text-field
-              v-model="email"
+              v-model="email.value.value"
+              :error-messages="email.errorMessage.value || loginErrorMessage"
               density="compact"
               placeholder="johndoe@gmail.com"
               variant="outlined"
@@ -68,10 +109,10 @@ export default {
             </div>
 
             <v-text-field
-              v-model="password"
+              v-model="password.value.value"
+              :error-messages="password.errorMessage.value || loginErrorMessage"
               :append-inner-icon="visible ? 'mdi-eye-off' : 'mdi-eye'"
               :type="visible ? 'text' : 'password'"
-              hint="Sua senha deve conter ao menos 8 caracteres."
               density="compact"
               placeholder="Insira sua senha"
               variant="outlined"

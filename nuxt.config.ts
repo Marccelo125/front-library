@@ -8,7 +8,7 @@ export default defineNuxtConfig({
   modules: ["vuetify-nuxt-module"],
   runtimeConfig: {
     public: {
-      apiUrl: "url",
+      apiUrl: "http://localhost:8000"
     },
   },
   css: ["~/assets/styles/main.scss"],
