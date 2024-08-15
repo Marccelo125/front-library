@@ -157,12 +157,7 @@ export default {
               @click:append-inner="repeatVisible = !repeatVisible"
             />
             <v-btn
-<<<<<<< HEAD
-              class="button-vuetify mt-2"
-              :loading="registerLoading"
-=======
               class="bg-middle-green text-white mt-2"
->>>>>>> develop
               type="submit"
               size="large"
               variant="tonal"
