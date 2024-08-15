@@ -26,12 +26,12 @@ export default {
         <v-col class="d-flex flex-column align-start justify-start title-col">
           <div>
             <h1
-              class="text-h4 text-lg-h2 text-md-h4 font-weight-bold title-of-home-page x-slide-transition"
+              class="text-h4 text-lg-subtitle text-xl-h3 font-weight-bold title-of-home-page x-slide-transition"
             >
               Bem-Vindo a
               <span class="library-name text-main-green">Library</span>
             </h1>
-            <p class="text-subtitle-1 text-lg-h4 text-md-h5 subtitle-library text-main-green x-slide-transition">
+            <p class="text-subtitle-1 text-lg-subtitle-1 text-xl-h5 text-md-h5 subtitle-library text-surface-variant x-slide-transition">
               Um site para conectar o autor ao leitor
             </p>
           </div>
@@ -46,7 +46,7 @@ export default {
                 </template>
                 <v-list-item-title
                   v-text="item"
-                  class="text-subtitle-2 text-sm-h7 text-lg-h6"
+                  class="text-h7 text-lg-subtitle text-xl-h6"
                 />
               </v-list-item>
             </v-list>
@@ -58,9 +58,9 @@ export default {
           </div>
         </v-col>
         <v-col
-          class="d-none d-sm-flex d-md-flex d-lg-flex h-100 justify-center align-center"
+          class="d-none d-sm-flex d-md-flex d-lg-flex justify-center align-center"
         >
-          <v-img width="65%" src="~/assets/img/Books.svg" class="books-img x-slide-reverse-transition" />
+          <img width="80%" src="~/assets/img/Books.svg" class=" books-img x-slide-reverse-transition" />
         </v-col>
       </v-row>
     </v-container>
@@ -71,6 +71,7 @@ export default {
 @import "/assets/styles/variables.scss";
 
 .home-container {
+  overflow-y: hidden;
   background-image: url("~/assets/img/home-bg.png");
   background-repeat: repeat;
   background-size: 500px;
@@ -90,6 +91,12 @@ export default {
     }
     .books-img {
       z-index: 2;
+    }
+  }
+
+  @media (max-height: 600px) {
+    .home-container {
+      overflow-y: auto;
     }
   }
 }
