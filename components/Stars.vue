@@ -12,9 +12,9 @@
         methods: {
             getStars() {
                 const range = 50
-        
                 // number of stars based on screen size
                 const starsQtd = Math.floor(this.windowWidth / range);
+
                 const stars: Array<{top: number, left: number}> = [];
 
                 for (let i = 0; i <= starsQtd;i++) {
