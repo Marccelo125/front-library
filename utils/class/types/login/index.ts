@@ -5,10 +5,10 @@ export interface LoginApiType {
 }
 
 export interface LoginCostumerType {
-    login({email, password}: LoginType): Promise<LoginSuccessResponseType>
+    login({email, password}: LoginReferencesType): Promise<LoginSuccessResponseType>
 }
 
-export interface LoginType {
+export interface LoginReferencesType {
     email: FieldContext<string>
     password: FieldContext<string>
 }
