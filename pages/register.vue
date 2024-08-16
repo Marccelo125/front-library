@@ -158,6 +158,7 @@ export default {
             />
             <v-btn
               class="bg-middle-green text-white mt-2"
+              :loading="registerLoading"
               type="submit"
               size="large"
               variant="tonal"
