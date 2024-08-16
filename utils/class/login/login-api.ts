@@ -1,5 +1,5 @@
 import axios from "axios";
-import type { LoginApiType, LoginDataType, LoginSuccessResponseType } from "../types/login";
+import type { LoginApiType, LoginDataType, LoginResponseType } from "../types/login";
 
 export default class LoginApi implements LoginApiType {
     protected token = useCookie("XSRF-TOKEN");
@@ -12,7 +12,7 @@ export default class LoginApi implements LoginApiType {
         withCredentials: true,
     })
 
-    async login(loginData: LoginDataType): Promise<LoginSuccessResponseType> {
+    async login(loginData: LoginDataType): Promise<LoginResponseType> {
         const response = await this.client.post('login', loginData);
 
         return response.data

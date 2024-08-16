@@ -1,4 +1,4 @@
-import type {RegisterApiType, RegisterResponseType, RegisterType} from '../types/register/index';
+import type {RegisterApiType, RegisterResponseType, RegisterDataType} from '../types/register/index';
 import axios from 'axios';
 
 
@@ -14,7 +14,7 @@ export default class RegisterApi implements RegisterApiType {
     })
 
 
-    async register(userData: RegisterType): Promise<RegisterResponseType> {
+    async register(userData: RegisterDataType): Promise<RegisterResponseType> {
         const response = await this.client.post('/register', userData);
 
         return response.data
