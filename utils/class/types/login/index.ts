@@ -1,11 +1,11 @@
 import type { FieldContext } from "vee-validate";
 
 export interface LoginApiType {
-    login(loginData: LoginDataType): Promise<LoginSuccessResponseType>
+    login(loginData: LoginDataType): Promise<LoginResponseType>
 }
 
 export interface LoginCostumerType {
-    login({email, password}: LoginReferencesType): Promise<LoginSuccessResponseType>
+    login({email, password}: LoginReferencesType): Promise<LoginResponseType>
 }
 
 export interface LoginReferencesType {
@@ -18,7 +18,7 @@ export interface LoginDataType {
     password: string;
 }
 
-export interface LoginSuccessResponseType {
+export interface LoginResponseType {
     user: {
         id: number
         name: string
