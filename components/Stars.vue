@@ -8,6 +8,45 @@
             this.windowHeight = window.innerHeight;
             this.windowWidth = window.innerWidth;
         },
+
+        methods: {
+            getStars() {
+                const range = 50
+                // number of stars based on screen size
+                const starsQtd = Math.floor(this.windowWidth / range);
+
+                const stars: Array<{top: number, left: number}> = [];
+
+                for (let i = 0; i <= starsQtd;i++) {
+                    let positionIsValid = false;
+                    
+                    // check the position of the star
+                    while (!positionIsValid) {
+                        const top = randomNumber(100, this.windowHeight);
+                        const left = randomNumber(0, this.windowWidth);
+                        
+                        positionIsValid = true;
+
+                        // checks the position of other stars
+                        stars.forEach(star => {
+                            if ((top >= star.top - range && top <= star.top + range) && (left >= star.left - range && left <= star.left + range)) {
+                                positionIsValid =  false;
+                            }
+                        });
+
+                        if (positionIsValid) {
+                            stars.push({
+                                top,
+                                left,
+                            });
+                        }
+                    }
+
+                }
+
+                return stars;
+            }
+        }
     }
 </script>
 
@@ -17,11 +56,11 @@
             size="25px"
             :style="{
                 position: 'absolute',
-                top: `${randomNumber(100, windowHeight)}px`,
-                left: `${randomNumber(0, windowWidth)}px`,
+                top: `${star.top}px`,
+                left: `${star.left}px`,
                 color: '#4ADE80',
             }"
-            v-for="n in 25"
+            v-for="star in getStars()"
             icon="mdi-star-four-points-outline"
 
             class="stars-element"
