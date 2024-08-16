@@ -4,6 +4,7 @@ import LoginCostumer from '~/utils/class/login/login-costumer';
 import { loginValidationSchema } from '~/utils/validations/login-validation-schema';
 
 const loginErrorMessage = ref<string | undefined>(undefined);
+const loginLoading = ref<boolean>(false);
 
 // create form and validation with vee-validation
 const {handleSubmit, handleReset} = useForm({
@@ -16,13 +17,15 @@ const loginSubmit = handleSubmit((values) => {
 
   loginErrorMessage.value = undefined
 
+  loginLoading.value = true;
+
   // login user with api
   loginCostumer.login({email, password}).then(response => {
     if (response.token) {
       // login success
 
       // process
-      
+      loginLoading.value = false;
       handleReset();
       return;
     }
@@ -32,6 +35,8 @@ const loginSubmit = handleSubmit((values) => {
     if (!e.response.data) {
       return;
     }
+
+    loginLoading.value = false;
 
     loginErrorMessage.value = e.response.data.error;
   });
@@ -121,6 +126,7 @@ export default {
 
             <v-btn
               class="bg-middle-green text-white mt-4"
+              :loading="loginLoading"
               type="submit"
               size="large"
               variant="tonal"
