@@ -2,7 +2,7 @@ const lightTheme = {
   dark: false,
   colors: {
     /* Custom Colors */
-    "dark-bg": "#2C3F42",
+    "dark-bg": "#24232A",
     "middle-green": "#22c55e",
     "main-green": "#4ADE80",
     "detail-green": "#59AC97",
