@@ -27,7 +27,7 @@ export default {
           style="list-style: none"
         >
           <li>
-            <h1>LIBRARY</h1>
+            <h1 class="text-h3 font-weight-bold">LIBRARY</h1>
           </li>
           <li class="d-flex align-center ga-4 text-h4">
             <NuxtLink
@@ -74,7 +74,7 @@ export default {
 
             <div>
               <h3>Marcelo Duarte</h3>
-              <p class="text-subtitle-1" style="color: #62e581">
+              <p class="text-subtitle-1" style="color: #4ADE80">
                 Editar informações
               </p>
             </div>
@@ -98,12 +98,12 @@ export default {
           </li>
         </ul>
       </v-col>
-      <v-col cols="12">
+      <v-col cols="12" class="d-none d-lg-block">
         <ul
           class="d-flex align-center justify-space-evenly"
           style="list-style: none"
         >
-          <li class="d-flex align-center ma-4" style="gap: 6rem">
+          <li class="d-flex align-center ma-2" style="gap: 5rem">
             <NuxtLink
               to="#"
               class="text-decoration-none text-white"
