@@ -19,36 +19,36 @@ export default {
 </script>
 
 <template>
-  <v-container>
+  <v-container class="navbar">
     <v-row>
       <v-col cols="12" class="ga-12">
         <ul
-          class="navbaritem d-flex align-center justify-space-evenly"
+          class="d-flex align-center justify-space-evenly"
           style="list-style: none"
         >
           <li>
-            <h1 class="text-green">LIBRARY</h1>
+            <h1>LIBRARY</h1>
           </li>
           <li class="d-flex align-center ga-4 text-h4">
             <NuxtLink
               to="#"
               class="text-body-1 text-decoration-none text-white"
             >
-              <h4>Inicio</h4>
+              <h3>Inicio</h3>
             </NuxtLink>
 
             <NuxtLink
               to="#"
               class="text-body-1 text-decoration-none text-white"
             >
-              <h4>Destaques</h4>
+              <h3>Destaques</h3>
             </NuxtLink>
 
             <NuxtLink
               to="#"
               class="text-body-1 text-decoration-none text-white"
             >
-              <h4>Novidades</h4>
+              <h3>Novidades</h3>
             </NuxtLink>
           </li>
           <li>
@@ -98,13 +98,93 @@ export default {
           </li>
         </ul>
       </v-col>
+      <v-col cols="12">
+        <ul
+          class="d-flex align-center justify-space-evenly"
+          style="list-style: none"
+        >
+          <li class="d-flex align-center ma-4" style="gap: 6rem">
+            <NuxtLink
+              to="#"
+              class="text-decoration-none text-white"
+              style="font-size: 20px"
+            >
+              <h4>RPGs</h4>
+            </NuxtLink>
+
+            <NuxtLink
+              to="#"
+              class="text-decoration-none text-white"
+              style="font-size: 20px"
+            >
+              <h4>Mangá</h4>
+            </NuxtLink>
+
+            <NuxtLink
+              to="#"
+              class="text-decoration-none text-white"
+              style="font-size: 20px"
+            >
+              <h4>HQs</h4>
+            </NuxtLink>
+
+            <NuxtLink
+              to="#"
+              class="text-decoration-none text-white"
+              style="font-size: 20px"
+            >
+              <h4>Novels</h4>
+            </NuxtLink>
+
+            <NuxtLink
+              to="#"
+              class="text-decoration-none text-white"
+              style="font-size: 20px"
+            >
+              <h4>Populares</h4>
+            </NuxtLink>
+
+            <NuxtLink
+              to="#"
+              class="text-decoration-none text-white"
+              style="font-size: 20px"
+            >
+              <h4>Ação</h4>
+            </NuxtLink>
+
+            <NuxtLink
+              to="#"
+              class="text-decoration-none text-white"
+              style="font-size: 20px"
+            >
+              <h4>Aventura</h4>
+            </NuxtLink>
+
+            <NuxtLink
+              to="#"
+              class="text-decoration-none text-white"
+              style="font-size: 20px"
+            >
+              <h4>Miscelânia</h4>
+            </NuxtLink>
+          </li>
+        </ul>
+      </v-col>
     </v-row>
   </v-container>
 </template>
 
 <style scoped>
-.navbaritem {
+.navbar {
   overflow: hidden;
   z-index: 9999;
+}
+
+h1 {
+  color: #4ADE80;
+}
+
+h4 {
+  color: #8EF3BD;
 }
 </style>
