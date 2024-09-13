@@ -110,10 +110,10 @@ export default {
       </v-row>
     </v-container>
   </v-container>
-  <v-container class="w-100 h-screen bg-dark-bg" fluid>
+  <v-container  min-height="100vh" class="w-100  bg-dark-bg" fluid>
     <v-row class="w-100 d-flex flex-column align-center justify-center">
       <v-col>
-        <h1 class="mt-5 flex align-center justify-center text-center text-h4">
+        <h1 class="mt-5 flex align-center justify-center text-center text-h6 text-sm-h4 text-xl-h3">
           <span class="text-main-green"> Bem-vindo </span>
           ao nosso espaço para autores e leitores! Aqui, você pode compartilhar
           seus livros, dar sua opinião sobre outros livros e fazer parte da
@@ -130,8 +130,8 @@ export default {
       </v-col>
     </v-row>
     <v-row class="w-100 mt-10 d-flex flex-row justify-center align-start">
-      <v-col class="d-flex justify-center">
-        <v-list class="w-75 bg-transparent">
+      <v-col class="list-index-page-about-col d-flex justify-center">
+        <v-list class="list-index-page-about bg-transparent">
           <v-list-subheader class="text-h5 justify-center text-white">
             Para os Escritores
           </v-list-subheader>
@@ -139,12 +139,12 @@ export default {
             <template v-slot:prepend>
               <v-icon class="opacity-100" color="main-green" :icon="text.icon" />
             </template>
-            <v-list-item-subtitle v-text="text.value" />
+            <v-list-item-title class="wrap-text-index-page-list-item text-subtitle-2 text-sm-h6" v-text="text.value" />
           </v-list-item>
         </v-list>
       </v-col>
-      <v-col class="d-flex justify-center">
-        <v-list class="w-75 bg-transparent">
+      <v-col class="list-index-page-about-col d-flex justify-center">
+        <v-list class="list-index-page-about bg-transparent">
           <v-list-subheader class="text-h5 justify-center text-white">
             Para Leitores
           </v-list-subheader>
@@ -152,11 +152,21 @@ export default {
             <template v-slot:prepend>
               <v-icon class="opacity-100" color="main-green" :icon="text.icon" />
             </template>
-            <v-list-item-subtitle v-text="text.value" />
+            <v-list-item-title v-text="text.value" class="wrap-text-index-page-list-item text-subtitle-2 text-sm-h6" />
           </v-list-item>
         </v-list>
       </v-col>
     </v-row>
+  </v-container>
+  <v-container>
+    <BookCard 
+      title="My hero academia"
+      subtitle="Kōhei Horikoshi"
+      img="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/cool-anime-video-music-album-cover-design-template-70bf413b3c1cf99db9e7a40aec385183_screen.jpg?ts=1633335329"
+      number="35"
+      visualization="2.5k"
+      footer="Chapter 35: What do you..."
+    />
   </v-container>
 </template>
 
@@ -188,10 +198,21 @@ export default {
       }
     }
   }
-
+  
   @media (max-height: 600px) {
     .home-container {
       overflow-y: auto;
+    }
+  }
+}
+.list-index-page-about-col {
+  .list-index-page-about {
+    min-width: 300px;
+    .wrap-text-index-page-list-item {
+      text-overflow: unset;
+      white-space: normal;
+      overflow: visible;
+      color: rgb(184, 184, 184);
     }
   }
 }

@@ -7,6 +7,7 @@ const darkTheme = {
     "main-green": "#4ADE80",
     "detail-green": "#59AC97",
     "white-bg": "#F8F8F8",
+    "font-color-gray": "rgb(184, 184, 184)",
     "important-detail-one": "#FF5555",
     "important-detail-two": "#FFB92E",
 
