@@ -7,6 +7,7 @@ const lightTheme = {
     "main-green": "#4ADE80",
     "detail-green": "#59AC97",
     "white-bg": "#F8F8F8",
+    "font-color-gray-two": "rgb(100, 100, 100)",
     "important-detail-one": "#FF5555",
     "important-detail-two": "#FFB92E",
 

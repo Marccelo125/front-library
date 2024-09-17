@@ -47,13 +47,23 @@ export default {
         icon: "mdi mdi-fire",
       },
     ],
+    cordItems: [
+      {
+        title: "My hero academia",
+        subtitle: "Kōhei Horikoshi",
+        img: "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/cool-anime-video-music-album-cover-design-template-70bf413b3c1cf99db9e7a40aec385183_screen.jpg?ts=1633335329",
+        number: "35",
+        visualization: "2.5k",
+        footer: "Chapter 35: What do you...",
+      },
+    ]
   }),
 };
 </script>
 
 <template>
   <v-container
-    class="d-flex flex-column justify-center align-center pa-0 ma-0 w-100 h-screen home-container"
+    class="d-flex flex-column justify-center align-center pa-0 ma-0 w-100 home-container "
     fluid
   >
     <HomeHeader />
@@ -110,10 +120,12 @@ export default {
       </v-row>
     </v-container>
   </v-container>
-  <v-container  min-height="100vh" class="w-100  bg-dark-bg" fluid>
-    <v-row class="w-100 d-flex flex-column align-center justify-center">
+  <v-container min-height="100vh" class="w-100 pt-10 bg-dark-bg" fluid>
+    <v-row class="w-100 pt-10 d-flex flex-column align-center justify-center">
       <v-col>
-        <h1 class="mt-5 flex align-center justify-center text-center text-h6 text-sm-h4 text-xl-h3">
+        <h1
+          class="mt-5 flex align-center justify-center text-center text-h6 text-sm-h4 text-xl-h3"
+        >
           <span class="text-main-green"> Bem-vindo </span>
           ao nosso espaço para autores e leitores! Aqui, você pode compartilhar
           seus livros, dar sua opinião sobre outros livros e fazer parte da
@@ -129,17 +141,24 @@ export default {
         </NuxtLink>
       </v-col>
     </v-row>
-    <v-row class="w-100 mt-10 d-flex flex-row justify-center align-start">
-      <v-col class="list-index-page-about-col d-flex justify-center">
+    <v-row class="w-100 mt-10 mb-16 d-flex flex-row justify-center align-start" fluid> 
+      <v-col class="list-index-page-about-col w-100 d-flex justify-center" fluid>
         <v-list class="list-index-page-about bg-transparent">
           <v-list-subheader class="text-h5 justify-center text-white">
             Para os Escritores
           </v-list-subheader>
           <v-list-item v-for="(text, i) in forAuthorTextList">
             <template v-slot:prepend>
-              <v-icon class="opacity-100" color="main-green" :icon="text.icon" />
+              <v-icon
+                class="opacity-100"
+                color="main-green"
+                :icon="text.icon"
+              />
             </template>
-            <v-list-item-title class="wrap-text-index-page-list-item text-subtitle-2 text-sm-h6" v-text="text.value" />
+            <v-list-item-title
+              class="wrap-text-index-page-list-item text-subtitle-2 text-sm-h6"
+              v-text="text.value"
+            />
           </v-list-item>
         </v-list>
       </v-col>
@@ -158,16 +177,30 @@ export default {
       </v-col>
     </v-row>
   </v-container>
-  <v-container>
-    <BookCard 
-      title="My hero academia"
-      subtitle="Kōhei Horikoshi"
-      img="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/cool-anime-video-music-album-cover-design-template-70bf413b3c1cf99db9e7a40aec385183_screen.jpg?ts=1633335329"
-      number="35"
-      visualization="2.5k"
-      footer="Chapter 35: What do you..."
-    />
+  <v-container class="ma-0 w-100 bg-white" fluid>
+    <div class="w-100 d-flex justify-center align-center px-md-12 my-10" fluid>
+      <div  class="d-flex justify-space-between w-100 ">
+        <h1 class="text-h5 text-md-h4">Recomendados</h1>
+        <v-btn class="bg-main-green text-white" variant="text">Ver mais</v-btn>
+      </div>      
+    </div>    
+    <v-sheet class="mg-white"  >
+      <v-slide-group class="bg-white"  mobile-breakpoint="md">
+        <v-slide-group-item v-for="i in 15">
+          <BookCard
+            title="My hero academia"
+            subtitle="Kōhei Horikoshi"
+            img="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/cool-anime-video-music-album-cover-design-template-70bf413b3c1cf99db9e7a40aec385183_screen.jpg?ts=1633335329"
+            number="35"
+            visualization="2.5k"
+            footer="Chapter 35: What do you..."
+            class="ml-5"
+          />
+        </v-slide-group-item>
+      </v-slide-group>
+    </v-sheet>
   </v-container>
+  <Footer/>
 </template>
 
 <style lang="scss" scoped>
@@ -176,6 +209,7 @@ export default {
 .home-container {
   overflow-y: hidden;
   background-color: #ffff;
+  height: 90dvh;
   z-index: 2;
   .home-main {
     width: 90%;
@@ -198,7 +232,7 @@ export default {
       }
     }
   }
-  
+
   @media (max-height: 600px) {
     .home-container {
       overflow-y: auto;
