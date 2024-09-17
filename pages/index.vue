@@ -56,32 +56,34 @@ export default {
         visualization: "2.5k",
         footer: "Chapter 35: What do you...",
       },
-    ]
+    ],
   }),
 };
 </script>
 
 <template>
   <v-container
-    class="d-flex flex-column justify-center align-center pa-0 ma-0 w-100 home-container "
+    class="d-flex flex-column justify-center align-center pa-0 ma-0 w-100 home-container"
     fluid
   >
     <HomeHeader />
     <v-container
-      class="d-sm-flex d-sm-flex d-lg-flex justify-center align-start position-relative h-screen ma-0 home-main"
+      class="d-sm-flex d-sm-flex d-lg-flex justify-center align-start position-relative pb-10 h-screen ma-0 home-main"
       fluid
     >
-      <v-row class="h-screen index-page-main-row">
-        <v-col class="d-flex flex-column align-start justify-start title-col">
+      <v-row class="h-screen mt-12 mt-md-0 index-page-main-row">
+        <v-col
+          class="d-flex flex-column align-start justify-center pl-12 title-col"
+        >
           <div>
             <h1
-              class="text-h4 text-lg-subtitle text-xl-h3 font-weight-bold title-of-home-page x-slide-transition"
+              class="text-h4 text-lg-subtitle text-xl-h2 font-weight-bold title-of-home-page x-slide-transition"
             >
               Bem-Vindo a
               <span class="library-name text-main-green">Library</span>
             </h1>
             <p
-              class="text-subtitle-1 text-lg-subtitle-1 text-xl-h5 text-md-h5 subtitle-library text-surface-variant x-slide-transition"
+              class="text-subtitle-1 text-lg-subtitle-1 text-md-h4 text-xl-h5 subtitle-library text-surface-variant x-slide-transition"
             >
               Um site para conectar o autor ao leitor
             </p>
@@ -98,14 +100,12 @@ export default {
               </li>
             </ul>
           </div>
-          <div class="mt-10">
-            <v-btn
-              variant="flat"
-              width="text-subtitle-2"
-              class="bg-main-green text-white x-slide-transition"
+          <div class="pt-10">
+            <button
+              class="bg-main-green font-weight-bold text-white x-slide-transition text-h6 px-12 mb-6 mb-md-0 py-3 rounded-lg"
             >
-              Começar agora
-            </v-btn>
+              Começar Agora
+            </button>
           </div>
         </v-col>
         <v-col
@@ -120,31 +120,46 @@ export default {
       </v-row>
     </v-container>
   </v-container>
-  <v-container min-height="100vh" class="w-100 pt-10 bg-dark-bg" fluid>
+  <div class="d-none d-md-flex justify-center bg-white">
+    <v-icon class="pb-12" color="surface-variant" size="60" icon="mdi mdi-chevron-down" />
+  </div>
+  <v-container min-height="100vh" class="w-100 bg-dark-bg" fluid>
     <v-row class="w-100 pt-10 d-flex flex-column align-center justify-center">
-      <v-col>
+      <v-col class="px-16">
         <h1
-          class="mt-5 flex align-center justify-center text-center text-h6 text-sm-h4 text-xl-h3"
+          class="mt-5 flex align-center justify-center text-center text-h6 text-sm-h4 text-xl-h4"
         >
           <span class="text-main-green"> Bem-vindo </span>
-          ao nosso espaço para autores e leitores! Aqui, você pode compartilhar
-          seus livros, dar sua opinião sobre outros livros e fazer parte da
-          nossa comunidade. É fácil e feito para todos!
+          ao nosso espaço para autores e leitores! Aqui, você pode <br />
+          compartilhar seus livros, dar sua opinião sobre outros livros e fazer
+          <br />
+          parte da nossa comunidade. <br />
+          É fácil e feito para todos!
         </h1>
       </v-col>
       <v-col class="mt-10 d-flex justify-center align-center">
-        <v-btn class="bg-main-green text-white" variant="text">
+        <button
+          class="bg-main-green text-h7 text-md-6 text-lg-h6 text-white px-6 py-4 rounded-lg"
+        >
           Comece Agora
-        </v-btn>
-        <NuxtLink to="/login" class="ml-15 text-main-green">
+        </button>
+        <NuxtLink to="/login" class="ml-15 text-h6 text-main-green">
           Faça Login
         </NuxtLink>
       </v-col>
     </v-row>
-    <v-row class="w-100 mt-10 mb-16 d-flex flex-row justify-center align-start" fluid> 
-      <v-col class="list-index-page-about-col w-100 d-flex justify-center" fluid>
+    <v-row
+      class="w-100 mt-10 mb-16 d-flex flex-row justify-center align-start"
+      fluid
+    >
+      <v-col
+        class="list-index-page-about-col w-100 d-flex justify-center px-12"
+        fluid
+      >
         <v-list class="list-index-page-about bg-transparent">
-          <v-list-subheader class="text-h5 justify-center text-white">
+          <v-list-subheader
+            class="text-h5 font-weight-medium justify-center text-white"
+          >
             Para os Escritores
           </v-list-subheader>
           <v-list-item v-for="(text, i) in forAuthorTextList">
@@ -164,14 +179,23 @@ export default {
       </v-col>
       <v-col class="list-index-page-about-col d-flex justify-center">
         <v-list class="list-index-page-about bg-transparent">
-          <v-list-subheader class="text-h5 justify-center text-white">
+          <v-list-subheader
+            class="text-h5 font-weight-medium justify-center text-white"
+          >
             Para Leitores
           </v-list-subheader>
           <v-list-item v-for="(text, i) in forReaderTextList">
             <template v-slot:prepend>
-              <v-icon class="opacity-100" color="main-green" :icon="text.icon" />
+              <v-icon
+                class="opacity-100"
+                color="main-green"
+                :icon="text.icon"
+              />
             </template>
-            <v-list-item-title v-text="text.value" class="wrap-text-index-page-list-item text-subtitle-2 text-sm-h6" />
+            <v-list-item-title
+              v-text="text.value"
+              class="wrap-text-index-page-list-item text-subtitle-2 text-sm-h6"
+            />
           </v-list-item>
         </v-list>
       </v-col>
@@ -179,13 +203,13 @@ export default {
   </v-container>
   <v-container class="ma-0 w-100 bg-white" fluid>
     <div class="w-100 d-flex justify-center align-center px-md-12 my-10" fluid>
-      <div  class="d-flex justify-space-between w-100 ">
+      <div class="d-flex justify-space-between w-100">
         <h1 class="text-h5 text-md-h4">Recomendados</h1>
         <v-btn class="bg-main-green text-white" variant="text">Ver mais</v-btn>
-      </div>      
-    </div>    
-    <v-sheet class="mg-white"  >
-      <v-slide-group class="bg-white"  mobile-breakpoint="md">
+      </div>
+    </div>
+    <v-sheet class="mg-white">
+      <v-slide-group class="bg-white" mobile-breakpoint="md">
         <v-slide-group-item v-for="i in 15">
           <BookCard
             title="My hero academia"
@@ -200,7 +224,7 @@ export default {
       </v-slide-group>
     </v-sheet>
   </v-container>
-  <Footer/>
+  <Footer />
 </template>
 
 <style lang="scss" scoped>
@@ -217,7 +241,6 @@ export default {
     .index-page-main-row {
       background-color: #ffff;
       .title-col {
-        margin-top: 8rem;
         z-index: 2;
         .library-name {
           font-family: "Limelight", sans-serif;
