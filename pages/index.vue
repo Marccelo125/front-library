@@ -204,11 +204,13 @@ export default {
   <v-container class="ma-0 w-100 bg-white" fluid>
     <div class="w-100 d-flex justify-center align-center px-md-12 my-10" fluid>
       <div class="d-flex justify-space-between w-100">
-        <h1 class="text-h5 text-md-h4">Recomendados</h1>
+        <h1 class="text-h4 text-md-h3 font-weight-bold pl-6">Recomendados</h1>
         <v-btn class="bg-main-green text-white" variant="text">Ver mais</v-btn>
       </div>
     </div>
     <v-sheet class="mg-white">
+
+      <!-- TODO: deixar passar pro lado com o arrastar do mouse -->
       <v-slide-group class="bg-white" mobile-breakpoint="md">
         <v-slide-group-item v-for="i in 15">
           <BookCard
