@@ -52,10 +52,7 @@ export default {
       class="d-flex flex-column justify-space-between"
       style="width: 100%; height: 100%"
     >
-      <div>
-        <v-list :items="items"></v-list>
-      </div>
-      <div class="d-flex align-center mb-4 justify-space-around">
+      <div class="d-flex align-center mt-4 justify-space-evenly">
         <div>
           <h2 class="text-h6">Marcelo Duarte</h2>
           <NuxtLink
@@ -70,7 +67,7 @@ export default {
         <div class="d-flex justify-end align-end">
           <img
             src="https://i.pinimg.com/564x/59/15/e8/5915e871e9a464dcac6bcf331a29d174.jpg"
-            width="80"
+            width="75"
             class="rounded-circle"
             alt=""
           />
@@ -83,6 +80,9 @@ export default {
             />
           </span>
         </div>
+      </div>
+      <div class="mb-4">
+        <v-list :items="items"></v-list>
       </div>
     </div>
   </v-navigation-drawer>
