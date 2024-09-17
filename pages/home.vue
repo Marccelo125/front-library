@@ -3,9 +3,9 @@ import HomeNavbar from "~/components/HomeNavbar.vue";
 </script>
 
 <template>
-  <header class="text-white">
+  <v-app>
     <HomeNavbar />
-  </header>
+  </v-app>
 </template>
 
 <style scoped>

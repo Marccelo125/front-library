@@ -1,5 +1,3 @@
-import { NuxtLink } from '../.nuxt/components'; import darkTheme from
-'../config/themes/darkTheme';
 <script lang="ts">
 export default {
   data: () => ({
@@ -44,52 +42,50 @@ export default {
 </script>
 <template>
   <!-- DRAWER FOR MENU BTN NAVIGATION -->
-  <div class="d-flex d-md-none">
-    <v-navigation-drawer
-      v-model="drawer"
-      :location="$vuetify.display.mobile ? 'right' : undefined"
-      temporary
+  <v-navigation-drawer
+    class="d-flex d-md-none"
+    v-model="drawer"
+    :location="$vuetify.display.mobile ? 'right' : undefined"
+    temporary
+  >
+    <div
+      class="d-flex flex-column justify-space-between"
+      style="width: 100%; height: 100%"
     >
-      <div
-        class="d-flex flex-column justify-space-between"
-        style="width: 100%; height: 100%"
-      >
-        <div>
-          <v-list :items="items"></v-list>
-        </div>
-        <div class="d-flex align-center mb-4 justify-space-around">
-          <div>
-            <h2 class="text-h6">Marcelo Duarte</h2>
-            <NuxtLink
-              to="#"
-              class="editar-info text-subtitle-1"
-              style="color: #4ade80"
-            >
-              Editar informações
-            </NuxtLink>
-          </div>
-
-          <div class="d-flex justify-end align-end">
-            <img
-              src="https://i.pinimg.com/564x/59/15/e8/5915e871e9a464dcac6bcf331a29d174.jpg"
-              width="80"
-              class="rounded-circle"
-              alt=""
-            />
-            <span class="ml-14" style="position: absolute">
-              <v-icon
-                size="24"
-                color="#62E581"
-                style="border: 0.699rem solid #111; border-radius: 100%"
-                icon="mdi-circle"
-              />
-            </span>
-          </div>
-        </div>
-       
+      <div>
+        <v-list :items="items"></v-list>
       </div>
-    </v-navigation-drawer>
-  </div>
+      <div class="d-flex align-center mb-4 justify-space-around">
+        <div>
+          <h2 class="text-h6">Marcelo Duarte</h2>
+          <NuxtLink
+            to="#"
+            class="editar-info text-subtitle-1"
+            style="color: #4ade80"
+          >
+            Editar informações
+          </NuxtLink>
+        </div>
+
+        <div class="d-flex justify-end align-end">
+          <img
+            src="https://i.pinimg.com/564x/59/15/e8/5915e871e9a464dcac6bcf331a29d174.jpg"
+            width="80"
+            class="rounded-circle"
+            alt=""
+          />
+          <span class="ml-14" style="position: absolute">
+            <v-icon
+              size="24"
+              color="#62E581"
+              style="border: 0.699rem solid #111; border-radius: 100%"
+              icon="mdi-circle"
+            />
+          </span>
+        </div>
+      </div>
+    </div>
+  </v-navigation-drawer>
 
   <!-- FLEX APP BAR -->
   <v-app-bar class="d-lg-none text-white">
