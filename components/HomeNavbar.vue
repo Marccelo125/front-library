@@ -45,7 +45,7 @@ export default {
   <v-navigation-drawer
     class="d-flex d-md-none"
     v-model="drawer"
-    :location="$vuetify.display.mobile ? 'right' : undefined"
+    location="right"
     temporary
   >
     <div
