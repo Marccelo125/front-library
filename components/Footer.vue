@@ -14,17 +14,17 @@
 
 <template>
   <v-container  class="w-100 bg-dark-bg d-flex flex-column justify-center align-center footer-element position-relative" fluid>
-    <v-row class="d-flex justify-space-between align-start" :style="{width: '95%'}">
-      <v-col>
+    <v-row class="d-flex justify-space-evenly align-start" :style="{width: '75%'}">
+      <v-col class="d-flex flex-column justify-center align-center">
         <v-list width="300px"  class="bg-dark-bg" density="compact">
-          <v-list-title class="text-main-green text-h5">CONSTITUCIONAL</v-list-title>
-          <v-list-item class="text-h6"> Onde estamos </v-list-item>
-          <v-list-item class="text-h6"> Autores </v-list-item>
-          <v-list-item class="text-h6"> Principais curadores da comunidade </v-list-item>
+          <v-list-title class="text-main-green text-h6 font-weight-bold">INSTITUCIONAL</v-list-title>
+          <v-list-item class="text-h7"> Onde estamos </v-list-item>
+          <v-list-item class="text-h7"> Autores </v-list-item>
+          <v-list-item class="text-h7"> Principais curadores da comunidade </v-list-item>
         </v-list>
         <v-list width="300px" class="bg-dark-bg" density="compact">
-          <v-list-title class="text-main-green text-h5">CONTATO</v-list-title>
-          <v-list-item class="text-h6">
+          <v-list-title class="text-main-green text-h6 font-weight-bold">CONTATO</v-list-title>
+          <v-list-item class="text-h7">
             <v-icon
               color="main-green opacity-100"
               class="mr-1"
@@ -36,10 +36,10 @@
             <NuxtLink class="text-main-green" to="*"> suporte </NuxtLink>
           </v-list-item>
         </v-list>
-      </v-col>
-      <v-col>
+      </v-col> 
+      <v-col class="d-flex flex-column justify-center align-center">
         <v-list width="300px" class="bg-dark-bg" density="compact">
-          <v-list-title class="text-main-green text-h5">REDES SOCIAIS</v-list-title>
+          <v-list-title class="text-main-green text-h6 font-weight-bold">REDES SOCIAIS</v-list-title>
           <v-list-item class="text-h6">
             <NuxtLink class="">
               <v-icon class="text-font-color-gray-two" icon="mdi mdi-instagram" />
@@ -53,9 +53,9 @@
           </v-list-item>
         </v-list>
         <v-list width="300px" class="bg-dark-bg" density="compact">
-          <v-list-title class="text-main-green text-h5">TERMO DE USO</v-list-title>
-          <v-list-item class="text-h6"> segurança </v-list-item>
-          <v-list-item class="text-h6"> privacidade </v-list-item>
+          <v-list-title class="text-main-green text-h6 font-weight-bold">TERMO DE USO</v-list-title>
+          <v-list-item class="text-h7"> segurança </v-list-item>
+          <v-list-item class="text-h7"> privacidade </v-list-item>
         </v-list>
       </v-col>
     </v-row>
