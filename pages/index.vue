@@ -62,6 +62,7 @@ export default {
 </script>
 
 <template>
+  <BackToTopButton />
   <v-container
     class="d-flex flex-column justify-center align-center pa-0 ma-0 w-100 home-container "
     fluid
