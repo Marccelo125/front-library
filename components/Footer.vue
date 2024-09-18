@@ -2,8 +2,8 @@
 <template>
   <v-container  class="w-100 bg-dark-bg d-flex flex-column justify-center align-center footer-element position-relative" fluid>
     <v-row class="d-flex justify-space-between align-start" :style="{width: '95%'}">
-      <v-col class="logo">
-        <h1   class="text-main-green">Library</h1>
+      <v-col :style="{width: '300px'}" class="logo">
+        <h1  class="text-main-green">Library</h1>
         <p>Um site para conectar o autor ao leitor</p>
       </v-col>
       <v-col>
@@ -28,7 +28,7 @@
           </v-list-item>
         </v-list>
       </v-col> 
-      <v-col class="d-flex flex-column justify-center align-center">
+      <v-col>
         <v-list width="300px" class="bg-dark-bg" density="compact">
           <v-list-title class="text-main-green text-h6 font-weight-bold">REDES SOCIAIS</v-list-title>
           <v-list-item class="text-h6">
