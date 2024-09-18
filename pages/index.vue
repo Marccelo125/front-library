@@ -121,7 +121,7 @@ export default {
     </v-container>
   </v-container>
   <div class="d-none d-md-flex justify-center bg-white">
-    <v-icon class="pb-12" color="surface-variant" size="60" icon="mdi mdi-chevron-down" />
+    <v-icon class="pb-12" color="surface-variant text-main-green" size="60" icon="mdi mdi-chevron-down" />
   </div>
   <v-container min-height="100vh" class="w-100 bg-dark-bg" fluid>
     <v-row class="w-100 pt-10 d-flex flex-column align-center justify-center">
@@ -204,7 +204,7 @@ export default {
   <v-container class="ma-0 w-100 bg-white" fluid>
     <div class="w-100 d-flex justify-center align-center px-md-12 my-10" fluid>
       <div class="d-flex justify-space-between w-100">
-        <h1 class="text-h4 text-md-h3 font-weight-bold pl-6">Recomendados</h1>
+        <h1 class="text-h5 text-md-h3 font-weight-bold pl-6">Recomendados</h1>
         <v-btn class="bg-main-green text-white" variant="text">Ver mais</v-btn>
       </div>
     </div>
