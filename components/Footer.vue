@@ -1,20 +1,11 @@
-<script lang="ts">
-  export default {
-    data: () => ({
-      innerWidth: 0,
-      innerHeight: 0,
-    }),
-    mounted()  {
-      this.innerWidth = window.innerWidth
-      this.innerHeight = window.innerWidth
-    },
-    
-  }
-</script>
 
 <template>
   <v-container  class="w-100 bg-dark-bg d-flex flex-column justify-center align-center footer-element position-relative" fluid>
     <v-row class="d-flex justify-space-between align-start" :style="{width: '95%'}">
+      <v-col class="logo">
+        <h1   class="text-main-green">Library</h1>
+        <p>Um site para conectar o autor ao leitor</p>
+      </v-col>
       <v-col>
         <v-list width="300px"  class="bg-dark-bg" density="compact">
           <v-list-title class="text-main-green text-h5">CONSTITUCIONAL</v-list-title>
@@ -69,3 +60,13 @@
     </v-row>
   </v-container>
 </template>
+
+<style lang="scss" scoped>
+  .logo {
+    width: 50px;
+
+    h1 {
+      font-family: "Limelight", sans-serif;
+    }
+  }
+</style>
