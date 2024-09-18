@@ -122,7 +122,12 @@ export default {
     </v-container>
   </v-container>
   <div class="d-none d-md-flex justify-center bg-white">
-    <v-icon class="pb-12" color="surface-variant text-main-green" size="60" icon="mdi mdi-chevron-down" />
+    <v-icon
+      class="pb-12"
+      color="surface-variant text-main-green"
+      size="60"
+      icon="mdi mdi-chevron-down"
+    />
   </div>
   <v-container min-height="100vh" class="w-100 bg-dark-bg" fluid>
     <v-row class="w-100 pt-10 d-flex flex-column align-center justify-center">
@@ -210,9 +215,7 @@ export default {
       </div>
     </div>
     <v-sheet class="mg-white">
-
-      <!-- TODO: deixar passar pro lado com o arrastar do mouse -->
-      <v-slide-group class="bg-white" mobile-breakpoint="md">
+      <v-slide-group class="bg-white" mobile-breakpoint="md" >
         <v-slide-group-item v-for="i in 15">
           <BookCard
             title="My hero academia"
