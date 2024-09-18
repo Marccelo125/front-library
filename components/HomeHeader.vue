@@ -18,7 +18,7 @@ export default {
             <v-list-item>
               <NuxtLink
                 to="#"
-                class="header-list-item text-md-subtitle-2 text-decoration-none text-white-bg"
+                class="text-md-subtitle-2 text-decoration-none text-white-bg"
               >
                 <h4>Catálogo</h4>
               </NuxtLink>
@@ -26,7 +26,7 @@ export default {
             <v-list-item>
               <NuxtLink
                 to="#"
-                class="header-list-item text-md-subtitle-2 text-decoration-none text-white-bg"
+                class="text-md-subtitle-2 text-decoration-none text-white-bg"
               >
                 <h4>Serviços</h4>
               </NuxtLink>
@@ -34,7 +34,7 @@ export default {
             <v-list-item>
               <NuxtLink
                 to="#"
-                class="header-list-item text-md-subtitle-2 text-decoration-none text-white-bg"
+                class="text-md-subtitle-2 text-decoration-none text-white-bg"
               >
                 <h4>Suporte</h4>
               </NuxtLink>
@@ -42,7 +42,7 @@ export default {
             <v-list-item>
               <NuxtLink
                 to="#"
-                class="header-list-item text-md-subtitle-2 text-decoration-none text-white-bg"
+                class="text-md-subtitle-2 text-decoration-none text-white-bg"
               >
                 <h4>Contato</h4>
               </NuxtLink>
@@ -84,25 +84,25 @@ export default {
         >
           <v-list class="options-list bg-dark-bg ga-3">
             <NuxtLink to="/register">
-              <v-list-item class="header-list-item item-option">
+              <v-list-item class="item-option">
                 <h4 class="text-main-green">Criar Conta</h4>
               </v-list-item>
             </NuxtLink>
             <NuxtLink to="/login">
-              <v-list-item class="header-list-item item-option">
+              <v-list-item class="item-option">
                 <h4 class="text-main-green">Entrar</h4>
               </v-list-item>
             </NuxtLink>
-            <v-list-item class="header-list-item item-option">
+            <v-list-item class="item-option">
               <h4>Catálogo</h4>
             </v-list-item>
-            <v-list-item class="header-list-item item-option">
+            <v-list-item class="item-option">
               <h4>Serviços</h4>
             </v-list-item>
-            <v-list-item class="header-list-item item-option">
+            <v-list-item class="item-option">
               <h4>Contato</h4>
             </v-list-item>
-            <v-list-item class="header-list-item item-option">
+            <v-list-item class="item-option">
               <h4>Suporte</h4>
             </v-list-item>
           </v-list>
@@ -138,6 +138,7 @@ export default {
       .item-option {
         cursor: pointer;
         width: 100%;
+
         &:hover {
           background-color: #424242;
         }
@@ -148,6 +149,13 @@ export default {
     }
     a {
       text-decoration: none;
+    }
+  }
+
+  h4 {
+    transition: all 0.2s ease;
+    &:hover {
+      color: #4ADE80 !important;
     }
   }
 

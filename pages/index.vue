@@ -103,7 +103,7 @@ export default {
           </div>
           <div class="pt-10">
             <button
-              class="bg-main-green font-weight-bold text-white x-slide-transition text-h6 px-12 mb-6 mb-md-0 py-3 rounded-lg"
+              class="button-hover bg-main-green font-weight-bold text-white x-slide-transition text-h6 px-12 mb-6 mb-md-0 py-3 rounded-lg"
             >
               Começar Agora
             </button>
@@ -123,7 +123,7 @@ export default {
   </v-container>
   <div class="d-none d-md-flex justify-center bg-white">
     <v-icon
-      class="pb-12"
+      class="arrow-icon pb-12"
       color="surface-variant text-main-green"
       size="60"
       icon="mdi mdi-chevron-down"
@@ -145,7 +145,7 @@ export default {
       </v-col>
       <v-col class="mt-10 d-flex justify-center align-center">
         <button
-          class="bg-main-green text-h7 text-md-6 text-lg-h6 text-white px-6 py-4 rounded-lg"
+          class="button-hover bg-main-green text-h7 text-md-6 text-lg-h6 text-white px-6 py-4 rounded-lg"
         >
           Comece Agora
         </button>
@@ -211,11 +211,13 @@ export default {
     <div class="w-100 d-flex justify-center align-center px-md-12 my-10" fluid>
       <div class="d-flex justify-space-between w-100">
         <h1 class="text-h5 text-md-h3 font-weight-bold pl-6">Recomendados</h1>
-        <v-btn class="bg-main-green text-white" variant="text">Ver mais</v-btn>
+        <v-btn class="button-hover bg-main-green text-white" variant="text"
+          >Ver mais</v-btn
+        >
       </div>
     </div>
     <v-sheet class="mg-white">
-      <v-slide-group class="bg-white" mobile-breakpoint="md" >
+      <v-slide-group class="bg-white" mobile-breakpoint="md">
         <v-slide-group-item v-for="i in 15">
           <BookCard
             title="My hero academia"
@@ -235,6 +237,20 @@ export default {
 
 <style lang="scss" scoped>
 @import "/assets/styles/variables.scss";
+
+.button-hover {
+  transition: all 0.2s;
+  &:hover {
+    transform: scale(1.02);
+  }
+}
+
+.arrow-icon {
+  transition: all 0.2s;
+  &:hover {
+    transform: scale(1.08);
+  }
+}
 
 .home-container {
   overflow-y: hidden;
