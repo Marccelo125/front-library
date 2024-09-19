@@ -49,7 +49,7 @@ export default {
     temporary
   >
     <div
-      class="d-flex flex-column justify-space-between"
+      class="d-flex flex-column justify-start"
       style="width: 100%; height: 100%"
     >
       <div class="d-flex align-center mt-4 justify-space-evenly">
@@ -140,8 +140,7 @@ export default {
             </li>
           </ul>
         </v-col>
-
-        <v-col cols="10" class="px-12 d-flex d-md-none">
+        <v-col cols="9" sm="10" class="pl-12 pr-0 px-md-12 d-flex d-md-none">
           <div>
             <NuxtLink to="#" class="text-decoration-none">
               <h1 class="text-h3 font-weight-bold">LIBRARY</h1>
